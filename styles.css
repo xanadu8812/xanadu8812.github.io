@@ -498,20 +498,109 @@ textarea {
   scroll-snap-align: center;
 }
 
-.project-thumb {
+.project-visual {
   aspect-ratio: 1 / 1.18;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
-    var(--frame-bg-soft);
   overflow: hidden;
+  padding: 14px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 12px;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.14), transparent 11rem),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.07), transparent 38%),
+    var(--frame-bg-soft);
 }
 
-.project-thumb img {
+.project-visual-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-visual-kicker {
+  display: block;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.project-visual-title {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+.project-brand {
+  display: block;
+  max-width: 84px;
+  max-height: 30px;
+  object-fit: contain;
+  object-position: right top;
+}
+
+.project-brand-text {
+  max-width: 84px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.86);
+  text-align: right;
+}
+
+.project-shot-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 15, 20, 0.35);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+}
+
+.project-shot-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.project-theme-wekall {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(77, 234, 178, 0.2), transparent 10rem),
+    linear-gradient(155deg, rgba(108, 78, 219, 0.94), rgba(41, 29, 85, 0.98));
+}
+
+.project-theme-wekall-admin {
+  background:
+    radial-gradient(circle at 80% 12%, rgba(255, 173, 64, 0.24), transparent 9rem),
+    linear-gradient(160deg, rgba(74, 43, 177, 0.96), rgba(252, 161, 28, 0.28));
+}
+
+.project-theme-microimpulso {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(119, 111, 255, 0.26), transparent 9rem),
+    linear-gradient(160deg, rgba(18, 22, 44, 0.98), rgba(109, 102, 255, 0.62));
+}
+
+.project-theme-microimpulso-app {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(255, 255, 255, 0.12), transparent 9rem),
+    linear-gradient(160deg, rgba(20, 24, 42, 0.98), rgba(93, 81, 255, 0.7));
+}
+
+.project-theme-devil-tv {
+  background:
+    radial-gradient(circle at 15% 15%, rgba(199, 53, 88, 0.18), transparent 9rem),
+    linear-gradient(160deg, rgba(9, 10, 16, 0.98), rgba(35, 22, 35, 0.98));
+}
+
+.project-theme-campus {
+  background:
+    radial-gradient(circle at 82% 14%, rgba(109, 182, 255, 0.22), transparent 10rem),
+    linear-gradient(160deg, rgba(82, 137, 226, 0.95), rgba(93, 45, 173, 0.92));
 }
 
 .project-thumb-fallback,
@@ -570,6 +659,24 @@ textarea {
 
 .screen-mobile .project-name {
   font-size: 8px;
+}
+
+.screen-mobile .project-visual {
+  padding: 10px;
+  gap: 9px;
+}
+
+.screen-mobile .project-visual-kicker {
+  font-size: 7px;
+}
+
+.screen-mobile .project-visual-title {
+  font-size: 11px;
+}
+
+.screen-mobile .project-brand {
+  max-width: 62px;
+  max-height: 22px;
 }
 
 .screen-mobile .skills-title {
@@ -633,11 +740,18 @@ textarea {
   background: var(--frame-bg-soft);
 }
 
-.single-thumb img {
-  width: 100%;
+.project-visual-detail {
   height: 100%;
-  object-fit: cover;
-  display: block;
+  padding: 18px;
+}
+
+.project-visual-detail .project-visual-title {
+  font-size: 18px;
+}
+
+.project-visual-detail .project-brand {
+  max-width: 108px;
+  max-height: 38px;
 }
 
 .single-copy h1 {
@@ -702,6 +816,14 @@ textarea {
 .screen-mobile .single-tags span {
   font-size: 7px;
   padding: 6px 8px;
+}
+
+.screen-mobile .project-visual-detail {
+  padding: 12px;
+}
+
+.screen-mobile .project-visual-detail .project-visual-title {
+  font-size: 13px;
 }
 
 .contact-layout {

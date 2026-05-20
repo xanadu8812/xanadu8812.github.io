@@ -3,6 +3,9 @@ const PROJECTS = [
     slug: "wekall-web",
     title: "WeKall",
     image: "assets/project-shots/wekall-home.png",
+    brandImage: "assets/project-brands/wekall.svg",
+    theme: "wekall",
+    imagePosition: "50% 0%",
     type: "Conversational AI",
     url: "https://www.wekall.co/",
     summary: "Plataforma de IA conversacional para voz y chat en la nube.",
@@ -13,6 +16,9 @@ const PROJECTS = [
     slug: "wekall-admin",
     title: "WeKall Admin",
     image: "assets/project-shots/wekall-admin.png",
+    brandImage: "assets/project-brands/wekall.svg",
+    theme: "wekall-admin",
+    imagePosition: "50% 14%",
     type: "Admin Portal",
     url: "https://admin.wekall.co",
     summary: "Portal administrativo para telefonía, reportes y control operativo.",
@@ -23,6 +29,9 @@ const PROJECTS = [
     slug: "microimpulso-web",
     title: "Microimpulso",
     image: "assets/project-shots/microimpulso-home.png",
+    brandImage: "assets/project-brands/microimpulso.png",
+    theme: "microimpulso",
+    imagePosition: "50% 0%",
     type: "Fintech Website",
     url: "https://microimpulso.co",
     summary: "Landing fintech para microcréditos con simulación y solicitud rápida.",
@@ -33,6 +42,9 @@ const PROJECTS = [
     slug: "microimpulso-app",
     title: "Microimpulso App",
     image: "assets/project-shots/microimpulso-app.png",
+    brandImage: "assets/project-brands/microimpulso.png",
+    theme: "microimpulso-app",
+    imagePosition: "50% 18%",
     type: "Client Access",
     url: "https://app.microimpulso.co",
     summary: "Portal de acceso para clientes y flujos privados de Microimpulso.",
@@ -43,6 +55,9 @@ const PROJECTS = [
     slug: "devil-tv",
     title: "Media Evaluation Platform Static",
     image: "assets/project-shots/devil-tv.png",
+    brandImage: "assets/project-brands/devil-tv.png",
+    theme: "devil-tv",
+    imagePosition: "50% 0%",
     type: "Static Web App",
     url: "https://lerna-admin.github.io/media-evaluation-platform-static",
     summary: "Plataforma web para descubrimiento y evaluación de contenido.",
@@ -52,12 +67,15 @@ const PROJECTS = [
   {
     slug: "campus-ccc",
     title: "Campus CCC",
-    image: "",
+    image: "assets/project-shots/campus-ccc.png",
+    brandImage: "assets/project-brands/campus.gif",
+    theme: "campus",
+    imagePosition: "42% 0%",
     type: "Institutional Access",
     url: "https://campus.ccc.org.co/",
     summary: "Acceso institucional a campus y plataforma formativa.",
     details:
-      "Proyecto de acceso y experiencia de campus institucional. Por ahora queda representado como ficha de proyecto mientras se obtiene una captura pública mejor."
+      "Proyecto de acceso y experiencia de campus institucional, con foco en autenticación, soporte al usuario y operación de plataforma formativa."
   }
 ];
 
@@ -447,14 +465,39 @@ function renderNav(active, isMobile = false) {
   `;
 }
 
-function renderProjectCard(image, label, href) {
-  const media = image
-    ? `<div class="project-thumb"><img src="${image}" alt="" /></div>`
-    : `<div class="project-thumb project-thumb-fallback"><span>${label}</span></div>`;
+function renderProjectBrand(project) {
+  if (project.brandImage) {
+    return `<img class="project-brand" src="${project.brandImage}" alt="${project.title}" />`;
+  }
+  return `<span class="project-brand project-brand-text">${project.title}</span>`;
+}
+
+function renderProjectVisual(project, detail = false) {
+  const detailClass = detail ? " project-visual-detail" : "";
+  const image = project.image
+    ? `<div class="project-shot-frame">
+        <img src="${project.image}" alt="" style="object-position:${project.imagePosition || "50% 50%"}" />
+      </div>`
+    : `<div class="project-shot-frame project-thumb-fallback"><span>${project.title}</span></div>`;
+  return `
+    <div class="project-visual project-theme-${project.theme}${detailClass}">
+      <div class="project-visual-head">
+        <div>
+          <span class="project-visual-kicker">${project.type}</span>
+          <strong class="project-visual-title">${project.title}</strong>
+        </div>
+        ${renderProjectBrand(project)}
+      </div>
+      ${image}
+    </div>
+  `;
+}
+
+function renderProjectCard(project, href) {
   return `
     <a class="project-card" href="${href}">
-      ${media}
-      <span class="project-name">${label}</span>
+      ${renderProjectVisual(project)}
+      <span class="project-name">${project.title}</span>
     </a>
   `;
 }
@@ -464,7 +507,7 @@ function renderProjectsCarousel(kind) {
     <div class="projects-carousel" data-carousel="${kind}">
       <button class="carousel-arrow carousel-arrow-prev" type="button" aria-label="Previous project">‹</button>
       <div class="project-track" data-track>
-        ${PROJECTS.map((project) => renderProjectCard(project.image, project.title, `#/project/${project.slug}`)).join("")}
+        ${PROJECTS.map((project) => renderProjectCard(project, `#/project/${project.slug}`)).join("")}
       </div>
       <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Next project">›</button>
     </div>
@@ -480,12 +523,9 @@ function getSelectedProject() {
 
 function renderProjectDetail(isMobile) {
   const project = getSelectedProject();
-  const media = project.image
-    ? `<div class="single-thumb"><img src="${project.image}" alt="" /></div>`
-    : `<div class="single-thumb single-thumb-fallback"><span>${project.title}</span></div>`;
   return `
     <div class="single-project">
-      ${media}
+      <div class="single-thumb">${renderProjectVisual(project, true)}</div>
       <div class="single-copy">
         <h1>${project.title}</h1>
         <p>${project.details}</p>

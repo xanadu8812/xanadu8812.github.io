@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="topbar">
+    <div class="site-shell">
+      <header class="site-header">
         <a class="brand" href="#home" aria-label="Henry Gomez home">
           <span class="brand-mark">HG</span>
           <span class="brand-copy">
@@ -22,25 +22,25 @@
           </span>
         </a>
 
-        <nav class="topnav" aria-label="Primary">
+        <nav class="site-nav" aria-label="Primary">
           <a href="#home" id="navHome">Inicio</a>
           <a href="#focus" id="navFocus">Enfoque</a>
           <a href="#projects" id="navProjects">Proyecto</a>
           <a href="#contact" id="navContact">Contacto</a>
         </nav>
 
-        <div class="topbar-actions">
+        <div class="header-actions">
           <div class="lang-toggle" aria-label="Language switcher">
             <button class="lang-chip is-active" type="button" data-lang="es">ES</button>
             <button class="lang-chip" type="button" data-lang="en">EN</button>
           </div>
-          <a class="mini-link" id="linkedinTop" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="header-link" id="linkedinTop" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
       </header>
 
-      <main id="home">
-        <section class="hero">
-          <div class="hero-main">
+      <main class="page" id="home">
+        <section class="hero-grid">
+          <div class="hero-copy">
             <p class="eyebrow" id="availabilityText">Disponible para proyectos en Colombia y remoto</p>
             <h1 class="hero-title">
               <span id="heroLine1">Ingeniería full stack</span>
@@ -58,16 +58,17 @@
             </div>
           </div>
 
-          <aside class="hero-side">
-            <article class="hero-card profile-card">
-              <div class="profile-top">
+          <aside class="hero-panel">
+            <div class="profile-card">
+              <div class="profile-head">
                 <img class="profile-avatar" src="assets/avatar-01.svg" alt="" />
                 <div>
                   <div class="profile-name">Henry Gomez</div>
                   <div class="profile-role" id="heroRole">Ingeniero full stack</div>
                 </div>
               </div>
-              <dl class="meta-list">
+
+              <dl class="profile-facts">
                 <div>
                   <dt id="metaLocationLabel">Ubicación</dt>
                   <dd id="metaLocationValue">Colombia</dd>
@@ -81,11 +82,11 @@
                   <dd id="metaSpecialtyValue">Full stack, telco, infraestructura</dd>
                 </div>
               </dl>
-            </article>
+            </div>
 
-            <article class="hero-card signal-card">
+            <div class="signal-card">
               <p class="signal-label" id="signalLabel">Áreas activas</p>
-              <div class="signal-grid">
+              <div class="signal-tags">
                 <span>React</span>
                 <span>Next.js</span>
                 <span>Node.js</span>
@@ -95,35 +96,51 @@
                 <span>Proxmox</span>
                 <span>VoIP</span>
               </div>
-            </article>
+            </div>
           </aside>
         </section>
 
-        <section id="focus" class="section">
-          <div class="section-heading">
+        <section class="highlights">
+          <article class="highlight-card">
+            <span class="highlight-label" id="metaExperienceLabelCard">Experiencia</span>
+            <strong>16+</strong>
+            <p id="highlightExperienceBody">Años resolviendo producto, operación y continuidad técnica.</p>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-label" id="metaFocusLabelCard">Foco</span>
+            <strong id="highlightFocusValue">Full stack + telco</strong>
+            <p id="highlightFocusBody">Desarrollo web, CMS, VoIP, virtualización e infraestructura.</p>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-label" id="metaAvailabilityLabelCard">Modo de trabajo</span>
+            <strong id="highlightAvailabilityValue">Colombia / Remoto</strong>
+            <p id="highlightAvailabilityBody">Perfil técnico útil para construir y operar al mismo tiempo.</p>
+          </article>
+        </section>
+
+        <section class="section" id="focus">
+          <div class="section-head">
             <p class="section-kicker" id="focusKicker">Enfoque actual</p>
             <h2 class="section-title" id="focusTitle">Desarrollo, operación y continuidad técnica en un mismo perfil.</h2>
           </div>
-
           <div class="focus-grid" id="focusGrid" aria-label="Core capabilities"></div>
         </section>
 
-        <section id="projects" class="section">
-          <div class="section-heading">
+        <section class="section feature-layout" id="projects">
+          <div class="section-head">
             <p class="section-kicker" id="projectsKicker">Proyecto destacado</p>
             <h2 class="section-title" id="projectsTitle">Trabajo reciente con foco en producto, búsqueda y estabilidad.</h2>
           </div>
-
           <div id="projectGrid" class="project-grid" aria-label="Featured projects"></div>
         </section>
 
-        <section class="section stack-section">
-          <div class="section-heading narrow">
+        <section class="section stack-layout">
+          <div class="section-head narrow">
             <p class="section-kicker" id="stackKicker">Stack principal</p>
             <h2 class="section-title" id="stackTitle">Tecnologías con las que puedo construir, integrar y operar.</h2>
           </div>
 
-          <div class="stack-columns">
+          <div class="stack-grid">
             <article class="stack-card">
               <h3 id="stackCol1Title">Desarrollo web</h3>
               <p id="stackCol1Body">JavaScript, TypeScript, React, Next.js, Node.js, APIs REST, interfaces administrativas y flujos de negocio.</p>
@@ -139,8 +156,8 @@
           </div>
         </section>
 
-        <section id="contact" class="section contact-section">
-          <div class="contact-panel">
+        <section class="section contact-layout" id="contact">
+          <div class="contact-card">
             <div class="contact-copy">
               <p class="section-kicker" id="contactKicker">Contacto</p>
               <h2 class="section-title" id="contactTitle">Si necesitas construir o estabilizar un producto, podemos hablar.</h2>
@@ -152,13 +169,13 @@
             <div class="contact-actions">
               <a class="btn btn-primary" id="bookCallB" href="#" target="_blank" rel="noreferrer">Agendar llamada</a>
               <button class="btn btn-secondary" id="copyEmailB" type="button">Copiar correo</button>
-              <a class="btn btn-ghost" id="contactLinkA" href="#" target="_blank" rel="noreferrer">Abrir LinkedIn</a>
+              <a class="btn btn-link" id="contactLinkA" href="#" target="_blank" rel="noreferrer">Abrir LinkedIn</a>
             </div>
           </div>
         </section>
       </main>
 
-      <footer class="footer">
+      <footer class="site-footer">
         <div class="footer-block">
           <div class="footer-label" id="footerEmailLabel">Correo</div>
           <a class="footer-value" id="footerEmail" href="mailto:henry8812@gmail.com">henry8812@gmail.com</a>

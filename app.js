@@ -29,6 +29,13 @@ const I18N = {
     metaExperienceValue: "16 años",
     metaSpecialtyLabel: "Especialidad",
     metaSpecialtyValue: "Full stack, telco, infraestructura",
+    highlightExperienceBody: "Años resolviendo producto, operación y continuidad técnica.",
+    highlightFocusLabel: "Foco",
+    highlightFocusValue: "Full stack + telco",
+    highlightFocusBody: "Desarrollo web, CMS, VoIP, virtualización e infraestructura.",
+    highlightAvailabilityLabel: "Modo de trabajo",
+    highlightAvailabilityValue: "Colombia / Remoto",
+    highlightAvailabilityBody: "Perfil técnico útil para construir y operar al mismo tiempo.",
     signalLabel: "Áreas activas",
     copyEmail: "Copiar correo",
     copied: "Correo copiado",
@@ -103,6 +110,13 @@ const I18N = {
     metaExperienceValue: "16 years",
     metaSpecialtyLabel: "Specialty",
     metaSpecialtyValue: "Full stack, telco, infrastructure",
+    highlightExperienceBody: "Years solving product, operations and technical continuity.",
+    highlightFocusLabel: "Focus",
+    highlightFocusValue: "Full stack + telco",
+    highlightFocusBody: "Web development, CMS, VoIP, virtualization and infrastructure.",
+    highlightAvailabilityLabel: "Working mode",
+    highlightAvailabilityValue: "Colombia / Remote",
+    highlightAvailabilityBody: "A technical profile useful for building and operating at the same time.",
     signalLabel: "Active areas",
     copyEmail: "Copy e-mail",
     copied: "E-mail copied",
@@ -244,6 +258,14 @@ function applyContent(lang) {
   $("#metaExperienceValue").textContent = copy.metaExperienceValue;
   $("#metaSpecialtyLabel").textContent = copy.metaSpecialtyLabel;
   $("#metaSpecialtyValue").textContent = copy.metaSpecialtyValue;
+  $("#metaExperienceLabelCard").textContent = copy.metaExperienceLabel;
+  $("#highlightExperienceBody").textContent = copy.highlightExperienceBody;
+  $("#metaFocusLabelCard").textContent = copy.highlightFocusLabel;
+  $("#highlightFocusValue").textContent = copy.highlightFocusValue;
+  $("#highlightFocusBody").textContent = copy.highlightFocusBody;
+  $("#metaAvailabilityLabelCard").textContent = copy.highlightAvailabilityLabel;
+  $("#highlightAvailabilityValue").textContent = copy.highlightAvailabilityValue;
+  $("#highlightAvailabilityBody").textContent = copy.highlightAvailabilityBody;
   $("#signalLabel").textContent = copy.signalLabel;
   $("#copyEmailA").textContent = copy.copyEmail;
   $("#copyEmailB").textContent = copy.copyEmail;

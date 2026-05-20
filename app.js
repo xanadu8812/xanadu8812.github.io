@@ -8,55 +8,31 @@ const CONFIG = {
 const I18N = {
   es: {
     pageTitle: "Henry Gomez · Portfolio",
-    metaDescription: "Portfolio bilingüe de Henry Gomez, ingeniero full stack enfocado en telecomunicaciones, infraestructura y productos digitales.",
-    brandRole: "Ingeniero full stack",
+    metaDescription: "Portfolio bilingüe de Henry Gomez, software developer full stack enfocado en telecomunicaciones, infraestructura y productos digitales.",
     navHome: "Inicio",
-    navFocus: "Enfoque",
-    navProjects: "Proyecto",
+    navProjects: "Proyectos",
+    navFocus: "Perfil",
     navContact: "Contacto",
-    availability: "Disponible para proyectos en Colombia y remoto",
+    heroIntro: "Hola, soy Henry,",
     heroLines: [
-      "Ingeniería full stack",
-      "para productos digitales,",
-      "telecomunicaciones",
-      "e infraestructura operativa."
+      "SOFTWARE",
+      "DEVELOPER",
+      "FULL STACK,",
+      "TELCO & INFRA"
     ],
-    heroBody: "Combino 16 años de experiencia en desarrollo, plataformas CMS, VoIP, virtualización y operación técnica para construir soluciones estables, escalables y útiles para negocio.",
-    heroRole: "Ingeniero full stack",
-    metaLocationLabel: "Ubicación",
-    metaLocationValue: "Colombia",
-    metaExperienceLabel: "Experiencia",
-    metaExperienceValue: "16 años",
-    metaSpecialtyLabel: "Especialidad",
-    metaSpecialtyValue: "Full stack, telco, infraestructura",
-    highlightExperienceBody: "Años resolviendo producto, operación y continuidad técnica.",
-    highlightFocusLabel: "Foco",
-    highlightFocusValue: "Full stack + telco",
-    highlightFocusBody: "Desarrollo web, CMS, VoIP, virtualización e infraestructura.",
-    highlightAvailabilityLabel: "Modo de trabajo",
-    highlightAvailabilityValue: "Colombia / Remoto",
-    highlightAvailabilityBody: "Perfil técnico útil para construir y operar al mismo tiempo.",
-    signalLabel: "Áreas activas",
+    heroBody: "Combino 16 años de experiencia en desarrollo full stack, plataformas CMS, telecomunicaciones e infraestructura para construir soluciones digitales estables, operables y alineadas con objetivos reales.",
     copyEmail: "Copiar correo",
     copied: "Correo copiado",
     bookCall: "Agendar 30 minutos",
-    openLinkedin: "Abrir LinkedIn",
-    focusKicker: "Enfoque actual",
-    focusTitle: "Desarrollo, operación y continuidad técnica en un mismo perfil.",
-    focusCards: [
-      {
-        title: "Full stack con criterio operativo",
-        body: "Trabajo el frontend, backend y la lógica de producto con foco en estabilidad, claridad técnica y entrega útil."
-      },
-      {
-        title: "CMS para entornos reales",
-        body: "También cubro WordPress y otras plataformas administrables donde la operación diaria importa tanto como el código."
-      },
-      {
-        title: "Telecom e infraestructura",
-        body: "Puedo moverme desde producto digital hacia VoIP, virtualización, servicios técnicos y soporte operativo sin romper continuidad."
-      }
-    ],
+    metaExperienceLabel: "Experiencia",
+    metaExperienceValue: "16 años",
+    metaExperienceBody: "Años resolviendo producto, operación y continuidad técnica.",
+    metaSpecialtyLabel: "Especialidad",
+    metaSpecialtyValue: "Full stack, telco, infraestructura",
+    metaSpecialtyBody: "Desarrollo web, CMS, VoIP, virtualización e infraestructura.",
+    metaLocationLabel: "Ubicación",
+    metaLocationValue: "Colombia",
+    metaLocationBody: "Perfil técnico útil para construir y operar al mismo tiempo.",
     projectsKicker: "Proyecto destacado",
     projectsTitle: "Trabajo reciente con foco en producto, búsqueda y estabilidad.",
     projectLink: "Ver proyecto",
@@ -71,6 +47,22 @@ const I18N = {
         repo: "https://github.com/lerna-admin/media-evaluation-platform-static"
       }
     ],
+    focusKicker: "Enfoque actual",
+    focusTitle: "Desarrollo, operación y continuidad técnica en un mismo perfil.",
+    focusCards: [
+      {
+        title: "Software development con criterio operativo",
+        body: "Trabajo frontend, backend y lógica de producto con foco en estabilidad, claridad técnica y entrega útil."
+      },
+      {
+        title: "CMS para entornos reales",
+        body: "También cubro WordPress y otras plataformas administrables donde la operación diaria importa tanto como el código."
+      },
+      {
+        title: "Telecom e infraestructura",
+        body: "Puedo moverme desde producto digital hacia VoIP, virtualización, servicios técnicos y soporte operativo sin romper continuidad."
+      }
+    ],
     stackKicker: "Stack principal",
     stackTitle: "Tecnologías con las que puedo construir, integrar y operar.",
     stackCol1Title: "Desarrollo web",
@@ -83,61 +75,38 @@ const I18N = {
     contactTitle: "Si necesitas construir o estabilizar un producto, podemos hablar.",
     contactBody: "El portafolio seguirá creciendo con proyectos reales. Por ahora, este sitio presenta el enfoque, stack y la línea de trabajo con la que estoy operando.",
     contactCall: "Agendar llamada",
+    contactLink: "Abrir LinkedIn",
     footerEmailLabel: "Correo",
     footerGithubLabel: "GitHub",
     footerLinkedinLabel: "LinkedIn"
   },
   en: {
     pageTitle: "Henry Gomez · Portfolio",
-    metaDescription: "Bilingual portfolio of Henry Gomez, a full stack engineer focused on telecommunications, infrastructure and digital products.",
-    brandRole: "Full stack engineer",
+    metaDescription: "Bilingual portfolio of Henry Gomez, a full stack software developer focused on telecommunications, infrastructure and digital products.",
     navHome: "Home",
-    navFocus: "Focus",
-    navProjects: "Project",
+    navProjects: "Projects",
+    navFocus: "Profile",
     navContact: "Contact",
-    availability: "Available for projects in Colombia and remotely",
+    heroIntro: "Hi, I'm Henry,",
     heroLines: [
-      "Full stack engineering",
-      "for digital products,",
-      "telecommunications",
-      "and operational infrastructure."
+      "SOFTWARE",
+      "DEVELOPER",
+      "FULL STACK,",
+      "TELCO & INFRA"
     ],
-    heroBody: "I combine 16 years of experience across development, CMS platforms, VoIP, virtualization and technical operations to build solutions that are stable, scalable and useful for real business needs.",
-    heroRole: "Full stack engineer",
-    metaLocationLabel: "Location",
-    metaLocationValue: "Colombia",
-    metaExperienceLabel: "Experience",
-    metaExperienceValue: "16 years",
-    metaSpecialtyLabel: "Specialty",
-    metaSpecialtyValue: "Full stack, telco, infrastructure",
-    highlightExperienceBody: "Years solving product, operations and technical continuity.",
-    highlightFocusLabel: "Focus",
-    highlightFocusValue: "Full stack + telco",
-    highlightFocusBody: "Web development, CMS, VoIP, virtualization and infrastructure.",
-    highlightAvailabilityLabel: "Working mode",
-    highlightAvailabilityValue: "Colombia / Remote",
-    highlightAvailabilityBody: "A technical profile useful for building and operating at the same time.",
-    signalLabel: "Active areas",
+    heroBody: "I combine 16 years of experience in full stack development, CMS platforms, telecommunications and infrastructure to build digital solutions that are stable, operable and aligned with real business goals.",
     copyEmail: "Copy e-mail",
     copied: "E-mail copied",
     bookCall: "Book 30 minutes",
-    openLinkedin: "Open LinkedIn",
-    focusKicker: "Current focus",
-    focusTitle: "Development, operations and technical continuity in a single profile.",
-    focusCards: [
-      {
-        title: "Full stack with operational judgment",
-        body: "I work across frontend, backend and product logic with a focus on stability, technical clarity and useful delivery."
-      },
-      {
-        title: "CMS for real environments",
-        body: "I also cover WordPress and other manageable platforms where daily operation matters as much as the code."
-      },
-      {
-        title: "Telecom and infrastructure",
-        body: "I can move from digital product work into VoIP, virtualization, technical services and operational support without breaking continuity."
-      }
-    ],
+    metaExperienceLabel: "Experience",
+    metaExperienceValue: "16 years",
+    metaExperienceBody: "Years solving product, operations and technical continuity.",
+    metaSpecialtyLabel: "Specialty",
+    metaSpecialtyValue: "Full stack, telco, infrastructure",
+    metaSpecialtyBody: "Web development, CMS, VoIP, virtualization and infrastructure.",
+    metaLocationLabel: "Location",
+    metaLocationValue: "Colombia",
+    metaLocationBody: "A technical profile useful for building and operating at the same time.",
     projectsKicker: "Featured project",
     projectsTitle: "Recent work centered on product, search and stability.",
     projectLink: "View project",
@@ -152,6 +121,22 @@ const I18N = {
         repo: "https://github.com/lerna-admin/media-evaluation-platform-static"
       }
     ],
+    focusKicker: "Current focus",
+    focusTitle: "Development, operations and technical continuity in a single profile.",
+    focusCards: [
+      {
+        title: "Software development with operational judgment",
+        body: "I work across frontend, backend and product logic with a focus on stability, technical clarity and useful delivery."
+      },
+      {
+        title: "CMS for real environments",
+        body: "I also cover WordPress and other manageable platforms where daily operation matters as much as the code."
+      },
+      {
+        title: "Telecom and infrastructure",
+        body: "I can move from digital product work into VoIP, virtualization, technical services and operational support without breaking continuity."
+      }
+    ],
     stackKicker: "Primary stack",
     stackTitle: "Technologies I can use to build, integrate and operate.",
     stackCol1Title: "Web development",
@@ -164,6 +149,7 @@ const I18N = {
     contactTitle: "If you need to build or stabilize a product, we can talk.",
     contactBody: "This portfolio will keep growing with real projects. For now, it presents the focus, stack and working line I am currently operating with.",
     contactCall: "Book a call",
+    contactLink: "Open LinkedIn",
     footerEmailLabel: "E-mail",
     footerGithubLabel: "GitHub",
     footerLinkedinLabel: "LinkedIn"
@@ -189,8 +175,7 @@ async function copyEmail(button) {
   try {
     await navigator.clipboard.writeText(CONFIG.email);
     if (button) {
-      const lang = getLanguage();
-      button.textContent = I18N[lang].copied;
+      button.textContent = I18N[getLanguage()].copied;
       window.setTimeout(() => {
         button.textContent = I18N[getLanguage()].copyEmail;
       }, 1200);
@@ -240,42 +225,33 @@ function applyContent(lang) {
   document.title = copy.pageTitle;
   document.querySelector('meta[name="description"]')?.setAttribute("content", copy.metaDescription);
 
-  $("#brandRole").textContent = copy.brandRole;
   $("#navHome").textContent = copy.navHome;
-  $("#navFocus").textContent = copy.navFocus;
   $("#navProjects").textContent = copy.navProjects;
+  $("#navFocus").textContent = copy.navFocus;
   $("#navContact").textContent = copy.navContact;
-  $("#availabilityText").textContent = copy.availability;
+  $("#heroIntro").textContent = copy.heroIntro;
   $("#heroLine1").textContent = copy.heroLines[0];
   $("#heroLine2").textContent = copy.heroLines[1];
   $("#heroLine3").textContent = copy.heroLines[2];
   $("#heroLine4").textContent = copy.heroLines[3];
   $("#heroBody").textContent = copy.heroBody;
-  $("#heroRole").textContent = copy.heroRole;
-  $("#metaLocationLabel").textContent = copy.metaLocationLabel;
-  $("#metaLocationValue").textContent = copy.metaLocationValue;
-  $("#metaExperienceLabel").textContent = copy.metaExperienceLabel;
-  $("#metaExperienceValue").textContent = copy.metaExperienceValue;
-  $("#metaSpecialtyLabel").textContent = copy.metaSpecialtyLabel;
-  $("#metaSpecialtyValue").textContent = copy.metaSpecialtyValue;
-  $("#metaExperienceLabelCard").textContent = copy.metaExperienceLabel;
-  $("#highlightExperienceBody").textContent = copy.highlightExperienceBody;
-  $("#metaFocusLabelCard").textContent = copy.highlightFocusLabel;
-  $("#highlightFocusValue").textContent = copy.highlightFocusValue;
-  $("#highlightFocusBody").textContent = copy.highlightFocusBody;
-  $("#metaAvailabilityLabelCard").textContent = copy.highlightAvailabilityLabel;
-  $("#highlightAvailabilityValue").textContent = copy.highlightAvailabilityValue;
-  $("#highlightAvailabilityBody").textContent = copy.highlightAvailabilityBody;
-  $("#signalLabel").textContent = copy.signalLabel;
   $("#copyEmailA").textContent = copy.copyEmail;
   $("#copyEmailB").textContent = copy.copyEmail;
   $("#bookCallA").textContent = copy.bookCall;
   $("#bookCallB").textContent = copy.contactCall;
-  $("#contactLinkA").textContent = copy.openLinkedin;
-  $("#focusKicker").textContent = copy.focusKicker;
-  $("#focusTitle").textContent = copy.focusTitle;
+  $("#metaExperienceLabel").textContent = copy.metaExperienceLabel;
+  $("#metaExperienceValue").textContent = copy.metaExperienceValue;
+  $("#highlightExperienceBody").textContent = copy.metaExperienceBody;
+  $("#metaSpecialtyLabel").textContent = copy.metaSpecialtyLabel;
+  $("#metaSpecialtyValue").textContent = copy.metaSpecialtyValue;
+  $("#highlightFocusBody").textContent = copy.metaSpecialtyBody;
+  $("#metaLocationLabel").textContent = copy.metaLocationLabel;
+  $("#metaLocationValue").textContent = copy.metaLocationValue;
+  $("#highlightAvailabilityBody").textContent = copy.metaLocationBody;
   $("#projectsKicker").textContent = copy.projectsKicker;
   $("#projectsTitle").textContent = copy.projectsTitle;
+  $("#focusKicker").textContent = copy.focusKicker;
+  $("#focusTitle").textContent = copy.focusTitle;
   $("#stackKicker").textContent = copy.stackKicker;
   $("#stackTitle").textContent = copy.stackTitle;
   $("#stackCol1Title").textContent = copy.stackCol1Title;
@@ -287,6 +263,7 @@ function applyContent(lang) {
   $("#contactKicker").textContent = copy.contactKicker;
   $("#contactTitle").textContent = copy.contactTitle;
   $("#contactBody").textContent = copy.contactBody;
+  $("#contactLinkA").textContent = copy.contactLink;
   $("#footerEmailLabel").textContent = copy.footerEmailLabel;
   $("#footerGithubLabel").textContent = copy.footerGithubLabel;
   $("#footerLinkedinLabel").textContent = copy.footerLinkedinLabel;
@@ -294,6 +271,7 @@ function applyContent(lang) {
   $("#bookCallA").href = CONFIG.calendly;
   $("#bookCallB").href = CONFIG.calendly;
   $("#contactLinkA").href = CONFIG.linkedin;
+  $("#githubTop").href = CONFIG.github;
   $("#linkedinTop").href = CONFIG.linkedin;
   $("#footerEmail").href = `mailto:${CONFIG.email}`;
   $("#footerEmail").textContent = CONFIG.email;
@@ -302,8 +280,8 @@ function applyContent(lang) {
   $("#footerLinkedin").href = CONFIG.linkedin;
   $("#footerLinkedin").textContent = "Henry Gomez";
 
-  renderFocusCards(lang);
   renderProjects(lang);
+  renderFocusCards(lang);
 
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);

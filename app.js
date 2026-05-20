@@ -61,6 +61,16 @@ const PROJECTS = [
   }
 ];
 
+const PROFILE = {
+  name: "Henry Gomez",
+  role: "Software Developer",
+  specialty: "Full Stack · Telecom · Infrastructure",
+  location: "Colombia",
+  email: "henry8812@gmail.com",
+  calendly: "https://calendly.com/henry-lernagroup/30min",
+  portfolioLabel: "xanadu8812"
+};
+
 const ROUTES = {
   home: {
     label: "Home",
@@ -71,11 +81,11 @@ const ROUTES = {
         <div class="content">
           <div class="home-copy">
             <p class="home-eyebrow">- I am</p>
-            <h1 class="home-title">Jaspinder Singh</h1>
-            <p class="home-subtitle">Frontend Developer</p>
+            <h1 class="home-title">${PROFILE.name}</h1>
+            <p class="home-subtitle">${PROFILE.specialty}</p>
           </div>
         </div>
-        ${renderFooter("Next Js")}
+        ${renderFooter("16 Years")}
         ${renderNav("home")}
       </section>
     `,
@@ -85,11 +95,11 @@ const ROUTES = {
         <div class="content">
           <div class="home-copy">
             <p class="home-eyebrow">- I am</p>
-            <h1 class="home-title">Jaspinder Singh</h1>
-            <p class="home-subtitle">Frontend Developer</p>
+            <h1 class="home-title">${PROFILE.name}</h1>
+            <p class="home-subtitle">${PROFILE.specialty}</p>
           </div>
         </div>
-        ${renderFooter("Next Js", true)}
+        ${renderFooter("16 Years", true)}
         ${renderNav("home", true)}
       </section>
     `
@@ -105,7 +115,7 @@ const ROUTES = {
             ${renderProjectsCarousel("desktop")}
           </div>
         </div>
-        ${renderFooter("Next Js")}
+        ${renderFooter("Live Work")}
         ${renderNav("projects")}
       </section>
     `,
@@ -118,7 +128,7 @@ const ROUTES = {
             ${renderProjectsCarousel("mobile")}
           </div>
         </div>
-        ${renderFooter("Next Js", true)}
+        ${renderFooter("Live Work", true)}
         ${renderNav("projects", true)}
       </section>
     `
@@ -132,13 +142,14 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              I&apos;m a creative frontend developer focused on building thoughtful digital products.
-              My process blends interactive systems, clean interfaces, and practical user journeys to
-              create work that feels modern, lightweight, and purposeful.
+              I&apos;m a software developer with 16 years of experience building digital products,
+              operational platforms and technical environments that need to work beyond the interface.
+              My focus spans full stack development, CMS implementations, telecom solutions and
+              infrastructure workflows that support real business operations.
             </p>
           </div>
         </div>
-        ${renderFooter("Next Js")}
+        ${renderFooter("Profile")}
         ${renderNav("about")}
       </section>
     `,
@@ -149,12 +160,12 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              I&apos;m a creative frontend developer building modern interfaces and lightweight digital
-              experiences with a strong sense of structure and clarity.
+              Software developer focused on full stack delivery, CMS platforms, telecom and
+              infrastructure with a practical approach to real operational systems.
             </p>
           </div>
         </div>
-        ${renderFooter("Next Js", true)}
+        ${renderFooter("Profile", true)}
         ${renderNav("about", true)}
       </section>
     `
@@ -169,8 +180,8 @@ const ROUTES = {
             <div class="skills-header">
               <h1 class="skills-title">Skills</h1>
               <p class="skills-copy">
-                Full stack development, CMS implementation, telecom systems and infrastructure support
-                delivered with a practical product mindset.
+                Core technologies and operating areas used across web products, CMS environments,
+                telecom systems and infrastructure-focused delivery.
               </p>
             </div>
             <div class="skills-groups">
@@ -210,7 +221,7 @@ const ROUTES = {
             </div>
           </div>
         </div>
-        ${renderFooter("Next Js")}
+        ${renderFooter("Capabilities")}
         ${renderNav("skills")}
       </section>
     `,
@@ -222,7 +233,7 @@ const ROUTES = {
             <div class="skills-header">
               <h1 class="skills-title">Skills</h1>
               <p class="skills-copy">
-                Full stack, CMS, telecom and infrastructure capabilities grouped in one view.
+                Full stack, CMS, DevOps and telecom capabilities grouped in one view.
               </p>
             </div>
             <div class="skills-groups">
@@ -259,7 +270,7 @@ const ROUTES = {
             </div>
           </div>
         </div>
-        ${renderFooter("Next Js", true)}
+        ${renderFooter("Capabilities", true)}
         ${renderNav("skills", true)}
       </section>
     `
@@ -274,22 +285,32 @@ const ROUTES = {
             <div>
               <h1 class="contact-title">LET&apos;S MAKE SOMETHING AMAZING!</h1>
               <div class="contact-person">
-                <div class="avatar-fallback">J</div>
+                <div class="avatar-fallback">H</div>
                 <div>
-                  <strong>Jaspinder Singh</strong>
-                  <span>Frontend Developer</span>
+                  <strong>${PROFILE.name}</strong>
+                  <span>${PROFILE.role}</span>
                 </div>
               </div>
+              <p class="contact-copy">
+                If you want to talk about product development, CMS platforms, telecom systems,
+                infrastructure or an ongoing technical build, schedule a meeting directly.
+              </p>
+              <div class="contact-actions">
+                <a class="contact-cta" href="${PROFILE.calendly}" target="_blank" rel="noreferrer">Book 30 Minutes</a>
+                <a class="contact-secondary" href="mailto:${PROFILE.email}">${PROFILE.email}</a>
+              </div>
             </div>
-            <form class="contact-form">
-              <input type="text" value="Name" aria-label="Name" />
-              <input type="email" value="Email" aria-label="Email" />
-              <textarea aria-label="Message">Message</textarea>
-              <button type="button">Send</button>
-            </form>
+            <div class="contact-panel">
+              <div class="contact-panel-head">Primary Contact</div>
+              <div class="contact-panel-body">
+                <p><strong>Calendly</strong><span>30-minute scheduling link for direct conversations.</span></p>
+                <p><strong>E-Mail</strong><span>${PROFILE.email}</span></p>
+                <p><strong>Location</strong><span>${PROFILE.location}</span></p>
+              </div>
+            </div>
           </div>
         </div>
-        ${renderFooter("Next Js")}
+        ${renderFooter("Calendly")}
         ${renderNav("contact")}
       </section>
     `,
@@ -301,22 +322,31 @@ const ROUTES = {
             <div>
               <h1 class="contact-title">LET&apos;S MAKE SOMETHING AMAZING!</h1>
               <div class="contact-person">
-                <div class="avatar-fallback">J</div>
+                <div class="avatar-fallback">H</div>
                 <div>
-                  <strong>Jaspinder Singh</strong>
-                  <span>Frontend Developer</span>
+                  <strong>${PROFILE.name}</strong>
+                  <span>${PROFILE.role}</span>
                 </div>
               </div>
+              <p class="contact-copy">
+                Book a direct call to discuss development, infrastructure or product work.
+              </p>
+              <div class="contact-actions">
+                <a class="contact-cta" href="${PROFILE.calendly}" target="_blank" rel="noreferrer">Book 30 Minutes</a>
+                <a class="contact-secondary" href="mailto:${PROFILE.email}">${PROFILE.email}</a>
+              </div>
             </div>
-            <form class="contact-form">
-              <input type="text" value="Name" aria-label="Name" />
-              <input type="email" value="Email" aria-label="Email" />
-              <textarea aria-label="Message">Message</textarea>
-              <button type="button">Send</button>
-            </form>
+            <div class="contact-panel">
+              <div class="contact-panel-head">Primary Contact</div>
+              <div class="contact-panel-body">
+                <p><strong>Calendly</strong><span>30-minute scheduling link.</span></p>
+                <p><strong>E-Mail</strong><span>${PROFILE.email}</span></p>
+                <p><strong>Location</strong><span>${PROFILE.location}</span></p>
+              </div>
+            </div>
           </div>
         </div>
-        ${renderFooter("Next Js", true)}
+        ${renderFooter("Calendly", true)}
         ${renderNav("contact", true)}
       </section>
     `
@@ -329,7 +359,7 @@ const ROUTES = {
         <div class="content">
           ${renderProjectDetail(false)}
         </div>
-        ${renderFooter("Next Js")}
+        ${renderFooter("Case Study")}
         ${renderNav("projects")}
       </section>
     `,
@@ -339,7 +369,7 @@ const ROUTES = {
         <div class="content">
           ${renderProjectDetail(true)}
         </div>
-        ${renderFooter("Next Js", true)}
+        ${renderFooter("Case Study", true)}
         ${renderNav("projects", true)}
       </section>
     `
@@ -355,7 +385,7 @@ const ROUTES = {
             <div class="not-found-note">Page not found</div>
           </div>
         </div>
-        ${renderFooter("Next Js")}
+        ${renderFooter("404")}
         ${renderNav("contact")}
       </section>
     `,
@@ -368,7 +398,7 @@ const ROUTES = {
             <div class="not-found-note">Page not found</div>
           </div>
         </div>
-        ${renderFooter("Next Js", true)}
+        ${renderFooter("404", true)}
         ${renderNav("contact", true)}
       </section>
     `
@@ -383,8 +413,8 @@ function renderMeta(isMobile = false) {
         <span>Lat 1993</span>
       </div>
       <div>
-        <strong>Jaspinder Singh</strong>
-        <span>${isMobile ? "Dev" : "Frontend Developer"}</span>
+        <strong>${PROFILE.name}</strong>
+        <span>${isMobile ? "Full Stack" : PROFILE.role}</span>
       </div>
     </div>
   `;
@@ -393,7 +423,7 @@ function renderMeta(isMobile = false) {
 function renderFooter(left, isMobile = false) {
   return `
     <div class="footer-left">${left}</div>
-    <div class="footer-right">${isMobile ? "J.Singh" : "Jaspinder Singh.com"}</div>
+    <div class="footer-right">${isMobile ? PROFILE.portfolioLabel : `${PROFILE.portfolioLabel}.github.io`}</div>
   `;
 }
 

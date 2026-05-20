@@ -752,10 +752,80 @@ textarea {
   color: var(--muted);
 }
 
-.contact-form {
-  padding: 20px;
+.contact-copy {
+  max-width: 48ch;
+  margin: 18px 0 0;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(243, 241, 251, 0.74);
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.contact-cta,
+.contact-secondary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-cta {
+  background: rgba(240, 244, 187, 0.14);
+  border-color: rgba(240, 244, 187, 0.3);
+}
+
+.contact-panel {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 22px;
+}
+
+.contact-panel-head {
+  margin-bottom: 16px;
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-panel-body {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-panel-body p {
+  margin: 0;
+}
+
+.contact-panel-body strong,
+.contact-panel-body span {
+  display: block;
+}
+
+.contact-panel-body strong {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.contact-panel-body span {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(243, 241, 251, 0.72);
 }
 
 .contact-form input,
@@ -807,24 +877,33 @@ textarea {
   font-size: 11px;
 }
 
-.screen-mobile .contact-form {
-  padding: 14px;
-}
-
-.screen-mobile .contact-form input,
-.screen-mobile .contact-form textarea {
-  margin-bottom: 10px;
-  padding: 9px 10px;
+.screen-mobile .contact-copy,
+.screen-mobile .contact-panel-body span {
   font-size: 11px;
 }
 
-.screen-mobile .contact-form textarea {
-  min-height: 92px;
+.screen-mobile .contact-actions {
+  gap: 8px;
+  margin-top: 14px;
 }
 
-.screen-mobile .contact-form button {
-  min-width: 94px;
-  padding: 8px 14px;
+.screen-mobile .contact-cta,
+.screen-mobile .contact-secondary {
+  min-height: 34px;
+  padding: 0 10px;
+  font-size: 8px;
+}
+
+.screen-mobile .contact-panel {
+  padding: 14px;
+}
+
+.screen-mobile .contact-panel-head {
+  font-size: 8px;
+  margin-bottom: 10px;
+}
+
+.screen-mobile .contact-panel-body strong {
   font-size: 10px;
 }
 

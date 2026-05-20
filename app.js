@@ -10,7 +10,7 @@ const COPY = {
       home: "Inicio",
       projects: "Proyectos",
       about: "Perfil",
-      skills: "Skills",
+      skills: "Habilidades",
       contact: "Contacto"
     },
     aria: {
@@ -39,7 +39,7 @@ const COPY = {
       footerRight: "Arquitectura a entrega"
     },
     skills: {
-      title: "Skills",
+      title: "Habilidades",
       copyDesktop:
         "Tecnologías y áreas operativas usadas en productos web, ecosistemas CMS, entornos cloud, operación de plataformas y entrega en producción.",
       copyMobile:
@@ -116,9 +116,9 @@ const COPY = {
     about: {
       title: "About",
       bodyDesktop:
-        "I lead the design and delivery of digital products, operational platforms and technical systems that need to hold up in production. Over 16 years, I have worked across product engineering, architecture, full stack execution, CMS ecosystems, cloud environments and platform operations, turning business demands into stable systems, clear user experiences and technical roadmaps that teams can actually operate and scale.",
+        "I lead the design and delivery of digital products, operational platforms and technical systems that need to perform in production. Across 16 years of work in product engineering, architecture, full stack execution, CMS ecosystems, cloud environments and platform operations, I turn business requirements into stable systems, usable experiences and delivery roadmaps that teams can actually operate and scale.",
       bodyMobile:
-        "I lead product, platform and cloud delivery with a focus on architecture, production readiness and technical execution aligned with real business goals.",
+        "I lead product, platform and cloud delivery with a focus on architecture, production readiness and technical execution that supports real business goals.",
       footerLeft: "16+ years",
       footerRight: "Architecture to delivery"
     },
@@ -137,7 +137,7 @@ const COPY = {
     contact: {
       title: "LET'S BUILD SOMETHING STRONG",
       copyDesktop:
-        "If you want to talk about digital products, AWS or Google Cloud advisory, CMS ecosystems or complex technical delivery, schedule a meeting directly.",
+        "If you need help with digital products, AWS or Google Cloud advisory, CMS ecosystems or complex technical delivery, book a direct conversation.",
       copyMobile:
         "Book a direct call to discuss cloud advisory, product engineering or platform delivery.",
       cta: "Book 30 minutes",

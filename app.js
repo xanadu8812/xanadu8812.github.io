@@ -64,7 +64,7 @@ const PROJECTS = [
 const PROFILE = {
   name: "Henry Gomez",
   role: "Software Developer",
-  specialty: "Full Stack · Telecom · Infrastructure",
+  specialty: "Full Stack · Product Engineering · Scalable Platforms",
   location: "Colombia",
   email: "henry8812@gmail.com",
   calendly: "https://calendly.com/henry-lernagroup/30min",

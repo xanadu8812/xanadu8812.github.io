@@ -46,7 +46,7 @@ const COPY = {
         "Capacidades full stack, CMS, cloud y plataforma reunidas en una sola vista.",
       frontend: "Frontend",
       backend: "Backend y CMS",
-      cloud: "Cloud, DevOps e Infra",
+      cloud: "Cloud and DevOps",
       footerLeft: "Stack de ejecución",
       footerRight: "Frontend · Backend · Cloud"
     },
@@ -130,7 +130,7 @@ const COPY = {
         "Full stack, CMS, cloud and platform capabilities grouped in one view.",
       frontend: "Frontend",
       backend: "Backend & CMS",
-      cloud: "Cloud, DevOps & Infra",
+      cloud: "Cloud and DevOps",
       footerLeft: "Execution stack",
       footerRight: "Frontend · Backend · Cloud"
     },

@@ -89,7 +89,6 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
 }
 
 .device {
@@ -106,6 +105,7 @@ textarea {
 }
 
 .mobile-device {
+  display: none;
   flex: 0 0 280px;
   width: 280px;
   border-radius: 22px;
@@ -367,14 +367,47 @@ textarea {
   font-size: 44px;
 }
 
-.project-grid {
+.projects-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.project-track {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(270px, 1fr);
   gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.project-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-arrow {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .project-card {
   display: block;
+  scroll-snap-align: center;
 }
 
 .project-thumb {
@@ -393,6 +426,16 @@ textarea {
   display: block;
 }
 
+.project-name {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .screen-mobile .projects-view {
   width: 100%;
 }
@@ -403,9 +446,23 @@ textarea {
   margin-bottom: 16px;
 }
 
-.screen-mobile .project-grid {
-  grid-template-columns: 1fr;
+.screen-mobile .projects-carousel {
+  gap: 10px;
+}
+
+.screen-mobile .project-track {
+  grid-auto-columns: 100%;
   gap: 12px;
+}
+
+.screen-mobile .carousel-arrow {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.screen-mobile .project-name {
+  font-size: 8px;
 }
 
 .single-project {
@@ -667,22 +724,17 @@ textarea {
   font-size: 9px;
 }
 
-@media (max-width: 1100px) {
-  .device-layout {
-    flex-direction: column;
-  }
-
-  .desktop-device {
-    width: 100%;
-  }
-}
-
 @media (max-width: 720px) {
   .replica-shell {
     padding: 16px 12px 28px;
   }
 
+  .desktop-device {
+    display: none;
+  }
+
   .mobile-device {
+    display: block;
     width: 100%;
     max-width: 360px;
   }

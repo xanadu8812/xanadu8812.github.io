@@ -39,10 +39,7 @@ const ROUTES = {
         <div class="content">
           <div class="projects-view">
             <h1 class="projects-title">Projects Showcase</h1>
-            <div class="project-grid">
-              ${renderProjectCard("project-ph.svg", "Startup Dashboard", "#/project")}
-              ${renderProjectCard("project-fintech.svg", "Remote Max", "#/project")}
-            </div>
+            ${renderProjectsCarousel("desktop")}
           </div>
         </div>
         ${renderFooter("Next Js")}
@@ -55,10 +52,7 @@ const ROUTES = {
         <div class="content">
           <div class="projects-view">
             <h1 class="projects-title">Projects Showcase</h1>
-            <div class="project-grid">
-              ${renderProjectCard("project-ph.svg", "Startup Dashboard", "#/project")}
-              ${renderProjectCard("project-fintech.svg", "Remote Max", "#/project")}
-            </div>
+            ${renderProjectsCarousel("mobile")}
           </div>
         </div>
         ${renderFooter("Next Js", true)}
@@ -290,7 +284,22 @@ function renderProjectCard(image, label, href) {
   return `
     <a class="project-card" href="${href}">
       <div class="project-thumb"><img src="assets/${image}" alt="" /></div>
+      <span class="project-name">${label}</span>
     </a>
+  `;
+}
+
+function renderProjectsCarousel(kind) {
+  return `
+    <div class="projects-carousel" data-carousel="${kind}">
+      <button class="carousel-arrow carousel-arrow-prev" type="button" aria-label="Previous project">‹</button>
+      <div class="project-track" data-track>
+        ${renderProjectCard("project-ph.svg", "Startup Dashboard", "#/project")}
+        ${renderProjectCard("project-fintech.svg", "Remote Max", "#/project")}
+        ${renderProjectCard("project-navo.svg", "Product Mockup", "#/project")}
+      </div>
+      <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Next project">›</button>
+    </div>
   `;
 }
 
@@ -306,6 +315,25 @@ function render() {
   const route = ROUTES[key];
   document.getElementById("desktopScreen").innerHTML = route.renderDesktop();
   document.getElementById("mobileScreen").innerHTML = route.renderMobile();
+  bindProjectCarousels();
+}
+
+function bindProjectCarousels() {
+  const carousels = document.querySelectorAll("[data-carousel]");
+  for (const carousel of carousels) {
+    const track = carousel.querySelector("[data-track]");
+    const prev = carousel.querySelector(".carousel-arrow-prev");
+    const next = carousel.querySelector(".carousel-arrow-next");
+    if (!track || !prev || !next) continue;
+
+    const step = () => Math.max(track.clientWidth * 0.82, 220);
+    prev.addEventListener("click", () => {
+      track.scrollBy({ left: -step(), behavior: "smooth" });
+    });
+    next.addEventListener("click", () => {
+      track.scrollBy({ left: step(), behavior: "smooth" });
+    });
+  }
 }
 
 window.addEventListener("hashchange", render);

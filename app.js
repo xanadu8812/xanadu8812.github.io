@@ -8,144 +8,162 @@ const CONFIG = {
 const I18N = {
   es: {
     pageTitle: "Henry Gomez · Portfolio",
-    metaDescription: "Portfolio bilingue de Henry Gomez, ingeniero de desarrollo full stack enfocado en telecomunicaciones e infraestructura.",
-    sidebarRole: "Ingeniero de desarrollo full stack",
+    metaDescription: "Portfolio bilingüe de Henry Gomez, ingeniero full stack enfocado en telecomunicaciones, infraestructura y productos digitales.",
+    brandRole: "Ingeniero full stack",
     navHome: "Inicio",
+    navFocus: "Enfoque",
     navProjects: "Proyecto",
-    navAbout: "Perfil",
-    navServices: "Stack",
-    heroRole: "Ingeniero full stack",
-    availability: "Disponible para proyectos ( Colombia / Remoto )",
+    navContact: "Contacto",
+    availability: "Disponible para proyectos en Colombia y remoto",
     heroLines: [
-      "INGENIERO FULL STACK",
-      "PARA PRODUCTOS DIGITALES",
-      "SISTEMAS DE TELECOM",
-      "E INFRAESTRUCTURA"
+      "Ingeniería full stack",
+      "para productos digitales,",
+      "telecomunicaciones",
+      "e infraestructura operativa."
     ],
-    heroBody: "Combino 16 anos de experiencia en desarrollo full stack, plataformas CMS, telecomunicaciones e infraestructura para construir soluciones web estables, operables y alineadas con objetivos reales de negocio.",
+    heroBody: "Combino 16 años de experiencia en desarrollo, plataformas CMS, VoIP, virtualización y operación técnica para construir soluciones estables, escalables y útiles para negocio.",
+    heroRole: "Ingeniero full stack",
+    metaLocationLabel: "Ubicación",
+    metaLocationValue: "Colombia",
+    metaExperienceLabel: "Experiencia",
+    metaExperienceValue: "16 años",
+    metaSpecialtyLabel: "Especialidad",
+    metaSpecialtyValue: "Full stack, telco, infraestructura",
+    signalLabel: "Áreas activas",
     copyEmail: "Copiar correo",
     copied: "Correo copiado",
-    ctaPrimary: "Agendar 30 minutos",
-    ctaSecondary: "Abrir LinkedIn",
-    projectsTitle: ["PROYECTO DESTACADO,", "TRABAJO DIGITAL ACTUAL."],
-    capabilitiesTitle: ["CAPACIDADES CLAVE,", "ENFOQUE TECNICO REAL"],
-    aboutTitle: "LISTO PARA CONSTRUIR?",
-    aboutSlashline: "// full stack // cms // telecom // infraestructura //",
-    aboutPoints: [
-      "✦ Desarrollo web full stack con enfoque practico y orientado a resultados.",
-      "✦ Experiencia con WordPress y otros CMS para entornos administrables.",
-      "✦ Operacion de infraestructura, virtualizacion, VoIP y servicios tecnicos.",
-      "✦ Perfil util para productos que necesitan construir y operar al mismo tiempo."
+    bookCall: "Agendar 30 minutos",
+    openLinkedin: "Abrir LinkedIn",
+    focusKicker: "Enfoque actual",
+    focusTitle: "Desarrollo, operación y continuidad técnica en un mismo perfil.",
+    focusCards: [
+      {
+        title: "Full stack con criterio operativo",
+        body: "Trabajo el frontend, backend y la lógica de producto con foco en estabilidad, claridad técnica y entrega útil."
+      },
+      {
+        title: "CMS para entornos reales",
+        body: "También cubro WordPress y otras plataformas administrables donde la operación diaria importa tanto como el código."
+      },
+      {
+        title: "Telecom e infraestructura",
+        body: "Puedo moverme desde producto digital hacia VoIP, virtualización, servicios técnicos y soporte operativo sin romper continuidad."
+      }
     ],
-    contactCta: "Agendar llamada",
-    footerConnectLabel: "Conectar",
-    footerGithub: "Hablar conmigo en GitHub",
-    footerThirdLabel: "Ubicacion",
-    footerThirdValue: "Colombia",
-    footerCopy: "©2026 Henry Gomez",
-    footerLegal: "Portafolio personal en evolucion continua. El contenido se actualiza de forma progresiva para reflejar proyectos reales, stack tecnico y capacidad operativa en desarrollo, telecomunicaciones e infraestructura.",
-    footerLinkedin: "Ver perfil de LinkedIn",
+    projectsKicker: "Proyecto destacado",
+    projectsTitle: "Trabajo reciente con foco en producto, búsqueda y estabilidad.",
     projectLink: "Ver proyecto",
+    projectRepo: "Abrir GitHub",
     projects: [
       {
-        tags: ["JavaScript", "UX/UI", "UX de busqueda", "GitHub Pages", "Flujo de releases"],
         title: "Media Evaluation Platform Static",
-        support: "Plataforma web para descubrimiento y evaluacion de contenido con mejoras en busqueda, UX, estabilidad y control de versiones.",
+        description: "Plataforma web para descubrimiento y evaluación de contenido, con trabajo reciente en UX de búsqueda, control de versiones, consistencia de datos y estabilidad general de la interfaz.",
+        tags: ["JavaScript", "UX de búsqueda", "GitHub Pages", "Releases", "UI state"],
         image: "assets/project-fintech.svg",
-        url: "https://lerna-admin.github.io/media-evaluation-platform-static/"
+        url: "https://lerna-admin.github.io/media-evaluation-platform-static/",
+        repo: "https://github.com/lerna-admin/media-evaluation-platform-static"
       }
     ],
-    capabilities: [
-      {
-        name: "Desarrollo web full stack",
-        role: "React, Next.js, JavaScript, TypeScript, Node.js y APIs.",
-        quote: "Desarrollo interfaces y logica de negocio con foco en estabilidad, mantenibilidad y entrega real."
-      },
-      {
-        name: "CMS y plataformas",
-        role: "WordPress y otros CMS para entornos administrables.",
-        quote: "Trabajo con sitios corporativos, comerciales y flujos de contenido donde la operacion diaria importa tanto como el codigo."
-      },
-      {
-        name: "Infraestructura y telecom",
-        role: "Proxmox, VoIP con Asterisk, virtualizacion y soporte tecnico.",
-        quote: "Puedo moverme entre producto digital e infraestructura para resolver necesidades operativas completas."
-      }
-    ]
+    stackKicker: "Stack principal",
+    stackTitle: "Tecnologías con las que puedo construir, integrar y operar.",
+    stackCol1Title: "Desarrollo web",
+    stackCol1Body: "JavaScript, TypeScript, React, Next.js, Node.js, APIs REST, interfaces administrativas y flujos de negocio.",
+    stackCol2Title: "CMS y contenido",
+    stackCol2Body: "WordPress y otras plataformas administrables para sitios corporativos, comerciales y de operación diaria.",
+    stackCol3Title: "Infraestructura y telco",
+    stackCol3Body: "Proxmox, Asterisk, VoIP, virtualización, Linux, redes, soporte técnico y servicios operativos.",
+    contactKicker: "Contacto",
+    contactTitle: "Si necesitas construir o estabilizar un producto, podemos hablar.",
+    contactBody: "El portafolio seguirá creciendo con proyectos reales. Por ahora, este sitio presenta el enfoque, stack y la línea de trabajo con la que estoy operando.",
+    contactCall: "Agendar llamada",
+    footerEmailLabel: "Correo",
+    footerGithubLabel: "GitHub",
+    footerLinkedinLabel: "LinkedIn"
   },
   en: {
     pageTitle: "Henry Gomez · Portfolio",
-    metaDescription: "Bilingual portfolio of Henry Gomez, a full stack development engineer focused on telecommunications and infrastructure.",
-    sidebarRole: "Full stack development engineer",
-    navHome: "Homepage",
+    metaDescription: "Bilingual portfolio of Henry Gomez, a full stack engineer focused on telecommunications, infrastructure and digital products.",
+    brandRole: "Full stack engineer",
+    navHome: "Home",
+    navFocus: "Focus",
     navProjects: "Project",
-    navAbout: "Profile",
-    navServices: "Stack",
-    heroRole: "Full stack engineer",
-    availability: "Available for projects ( Colombia / Remote )",
+    navContact: "Contact",
+    availability: "Available for projects in Colombia and remotely",
     heroLines: [
-      "FULL STACK ENGINEER",
-      "FOR DIGITAL PRODUCTS",
-      "TELECOM SYSTEMS",
-      "& INFRASTRUCTURE"
+      "Full stack engineering",
+      "for digital products,",
+      "telecommunications",
+      "and operational infrastructure."
     ],
-    heroBody: "I combine 16 years of experience in full stack development, CMS platforms, telecommunications and infrastructure to build web solutions that are stable, operational and aligned with real business goals.",
+    heroBody: "I combine 16 years of experience across development, CMS platforms, VoIP, virtualization and technical operations to build solutions that are stable, scalable and useful for real business needs.",
+    heroRole: "Full stack engineer",
+    metaLocationLabel: "Location",
+    metaLocationValue: "Colombia",
+    metaExperienceLabel: "Experience",
+    metaExperienceValue: "16 years",
+    metaSpecialtyLabel: "Specialty",
+    metaSpecialtyValue: "Full stack, telco, infrastructure",
+    signalLabel: "Active areas",
     copyEmail: "Copy e-mail",
     copied: "E-mail copied",
-    ctaPrimary: "Book 30 minutes",
-    ctaSecondary: "Open LinkedIn",
-    projectsTitle: ["FEATURED PROJECT,", "CURRENT DIGITAL WORK."],
-    capabilitiesTitle: ["CORE CAPABILITIES,", "REAL TECHNICAL FOCUS"],
-    aboutTitle: "READY TO BUILD?",
-    aboutSlashline: "// full stack // cms // telecom // infrastructure //",
-    aboutPoints: [
-      "✦ Full stack web development with a practical, results-oriented mindset.",
-      "✦ Experience with WordPress and other CMS solutions for manageable environments.",
-      "✦ Infrastructure operations, virtualization, VoIP and technical services.",
-      "✦ Useful profile for products that need both delivery and operations."
+    bookCall: "Book 30 minutes",
+    openLinkedin: "Open LinkedIn",
+    focusKicker: "Current focus",
+    focusTitle: "Development, operations and technical continuity in a single profile.",
+    focusCards: [
+      {
+        title: "Full stack with operational judgment",
+        body: "I work across frontend, backend and product logic with a focus on stability, technical clarity and useful delivery."
+      },
+      {
+        title: "CMS for real environments",
+        body: "I also cover WordPress and other manageable platforms where daily operation matters as much as the code."
+      },
+      {
+        title: "Telecom and infrastructure",
+        body: "I can move from digital product work into VoIP, virtualization, technical services and operational support without breaking continuity."
+      }
     ],
-    contactCta: "Book a call",
-    footerConnectLabel: "Connect",
-    footerGithub: "Talk to me on GitHub",
-    footerThirdLabel: "Location",
-    footerThirdValue: "Colombia",
-    footerCopy: "©2026 Henry Gomez",
-    footerLegal: "Personal portfolio in continuous evolution. The content is updated progressively to reflect real projects, technical stack and operating capability across development, telecommunications and infrastructure.",
-    footerLinkedin: "View LinkedIn profile",
+    projectsKicker: "Featured project",
+    projectsTitle: "Recent work centered on product, search and stability.",
     projectLink: "View project",
+    projectRepo: "Open GitHub",
     projects: [
       {
-        tags: ["JavaScript", "UX/UI", "Search UX", "GitHub Pages", "Release Flow"],
         title: "Media Evaluation Platform Static",
-        support: "Web platform for content discovery and evaluation with ongoing improvements in search, UX, stability and version control.",
+        description: "Web platform for content discovery and evaluation, with recent work around search UX, release control, data consistency and overall interface stability.",
+        tags: ["JavaScript", "Search UX", "GitHub Pages", "Releases", "UI state"],
         image: "assets/project-fintech.svg",
-        url: "https://lerna-admin.github.io/media-evaluation-platform-static/"
+        url: "https://lerna-admin.github.io/media-evaluation-platform-static/",
+        repo: "https://github.com/lerna-admin/media-evaluation-platform-static"
       }
     ],
-    capabilities: [
-      {
-        name: "Full Stack Web",
-        role: "React, Next.js, JavaScript, TypeScript, Node.js and APIs.",
-        quote: "I build interfaces and business logic with a focus on stability, maintainability and practical delivery."
-      },
-      {
-        name: "CMS & Platforms",
-        role: "WordPress and other CMS solutions for manageable environments.",
-        quote: "I work on corporate and commercial sites where daily operation matters as much as the code itself."
-      },
-      {
-        name: "Infrastructure & Telco",
-        role: "Proxmox, Asterisk-based VoIP, virtualization and technical support.",
-        quote: "I can move between digital product work and infrastructure to solve complete operational needs."
-      }
-    ]
+    stackKicker: "Primary stack",
+    stackTitle: "Technologies I can use to build, integrate and operate.",
+    stackCol1Title: "Web development",
+    stackCol1Body: "JavaScript, TypeScript, React, Next.js, Node.js, REST APIs, admin interfaces and business workflows.",
+    stackCol2Title: "CMS and content",
+    stackCol2Body: "WordPress and other manageable platforms for corporate, commercial and operational web properties.",
+    stackCol3Title: "Infrastructure and telco",
+    stackCol3Body: "Proxmox, Asterisk, VoIP, virtualization, Linux, networking, technical support and operational services.",
+    contactKicker: "Contact",
+    contactTitle: "If you need to build or stabilize a product, we can talk.",
+    contactBody: "This portfolio will keep growing with real projects. For now, it presents the focus, stack and working line I am currently operating with.",
+    contactCall: "Book a call",
+    footerEmailLabel: "E-mail",
+    footerGithubLabel: "GitHub",
+    footerLinkedinLabel: "LinkedIn"
   }
 };
 
-function $(selector) { return document.querySelector(selector); }
+function $(selector) {
+  return document.querySelector(selector);
+}
 
 function escapeHtml(text) {
-  return String(text ?? "").replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[char]));
+  return String(text ?? "").replace(/[&<>"']/g, (char) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[char]
+  ));
 }
 
 function getLanguage() {
@@ -156,46 +174,46 @@ function getLanguage() {
 async function copyEmail(button) {
   try {
     await navigator.clipboard.writeText(CONFIG.email);
-    if (button) button.textContent = I18N[getLanguage()].copied;
-    window.setTimeout(() => {
-      if (button) button.textContent = I18N[getLanguage()].copyEmail;
-    }, 1200);
+    if (button) {
+      const lang = getLanguage();
+      button.textContent = I18N[lang].copied;
+      window.setTimeout(() => {
+        button.textContent = I18N[getLanguage()].copyEmail;
+      }, 1200);
+    }
   } catch {
     window.location.href = `mailto:${CONFIG.email}`;
   }
 }
 
+function renderFocusCards(lang) {
+  const root = $("#focusGrid");
+  if (!root) return;
+  root.innerHTML = I18N[lang].focusCards.map((card) => `
+    <article class="focus-card">
+      <h3>${escapeHtml(card.title)}</h3>
+      <p>${escapeHtml(card.body)}</p>
+    </article>
+  `).join("");
+}
+
 function renderProjects(lang) {
   const root = $("#projectGrid");
   if (!root) return;
-  root.innerHTML = I18N[lang].projects.map((project) => {
-    const tags = project.tags.map((tag) => `<span class="ptag">${escapeHtml(tag)}</span>`).join("");
-    const support = project.support ? `<div class="psub">${escapeHtml(project.support)}</div>` : "";
-    return `
-      <article class="pcard">
-        <div class="pmedia"><img src="${escapeHtml(project.image)}" alt="" /></div>
-        <div class="pbody">
-          <div class="ptags">${tags}</div>
-          <div class="ptitle">${escapeHtml(project.title)}</div>
-          ${support}
-          <a class="pcta" href="${escapeHtml(project.url)}" target="_blank" rel="noreferrer">${escapeHtml(I18N[lang].projectLink)}</a>
+  root.innerHTML = I18N[lang].projects.map((project) => `
+    <article class="project-card">
+      <div class="project-media">
+        <img src="${escapeHtml(project.image)}" alt="" />
+      </div>
+      <div class="project-copy">
+        <div class="project-tags">
+          ${project.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
         </div>
-      </article>
-    `;
-  }).join("");
-}
-
-function renderCapabilities(lang) {
-  const root = $("#testimonialGrid");
-  if (!root) return;
-  root.innerHTML = I18N[lang].capabilities.map((item) => `
-    <article class="tcard">
-      <div class="ttext">“${escapeHtml(item.quote)}”</div>
-      <div class="tperson">
-        <img class="tavatar" src="assets/avatar-01.svg" alt="" />
-        <div>
-          <div class="tname">${escapeHtml(item.name)}</div>
-          <div class="trole">${escapeHtml(item.role)}</div>
+        <h3>${escapeHtml(project.title)}</h3>
+        <p>${escapeHtml(project.description)}</p>
+        <div class="project-actions">
+          <a href="${escapeHtml(project.url)}" target="_blank" rel="noreferrer">${escapeHtml(I18N[lang].projectLink)}</a>
+          <a href="${escapeHtml(project.repo)}" target="_blank" rel="noreferrer">${escapeHtml(I18N[lang].projectRepo)}</a>
         </div>
       </div>
     </article>
@@ -208,65 +226,73 @@ function applyContent(lang) {
   document.title = copy.pageTitle;
   document.querySelector('meta[name="description"]')?.setAttribute("content", copy.metaDescription);
 
-  $("#sidebarRole").textContent = copy.sidebarRole;
+  $("#brandRole").textContent = copy.brandRole;
   $("#navHome").textContent = copy.navHome;
+  $("#navFocus").textContent = copy.navFocus;
   $("#navProjects").textContent = copy.navProjects;
-  $("#navAbout").textContent = copy.navAbout;
-  $("#navServices").textContent = copy.navServices;
-  $("#heroRole").textContent = copy.heroRole;
+  $("#navContact").textContent = copy.navContact;
   $("#availabilityText").textContent = copy.availability;
   $("#heroLine1").textContent = copy.heroLines[0];
   $("#heroLine2").textContent = copy.heroLines[1];
   $("#heroLine3").textContent = copy.heroLines[2];
   $("#heroLine4").textContent = copy.heroLines[3];
   $("#heroBody").textContent = copy.heroBody;
+  $("#heroRole").textContent = copy.heroRole;
+  $("#metaLocationLabel").textContent = copy.metaLocationLabel;
+  $("#metaLocationValue").textContent = copy.metaLocationValue;
+  $("#metaExperienceLabel").textContent = copy.metaExperienceLabel;
+  $("#metaExperienceValue").textContent = copy.metaExperienceValue;
+  $("#metaSpecialtyLabel").textContent = copy.metaSpecialtyLabel;
+  $("#metaSpecialtyValue").textContent = copy.metaSpecialtyValue;
+  $("#signalLabel").textContent = copy.signalLabel;
   $("#copyEmailA").textContent = copy.copyEmail;
   $("#copyEmailB").textContent = copy.copyEmail;
-  $("#copyEmailC").textContent = copy.copyEmail;
-  $("#bookCallA").textContent = copy.ctaPrimary;
-  $("#contactLinkA").textContent = copy.ctaSecondary;
-  $("#projectsLine1").textContent = copy.projectsTitle[0];
-  $("#projectsLine2").textContent = copy.projectsTitle[1];
-  $("#capabilitiesLine1").textContent = copy.capabilitiesTitle[0];
-  $("#capabilitiesLine2").textContent = copy.capabilitiesTitle[1];
-  $("#aboutTitle").textContent = copy.aboutTitle;
-  $("#aboutSlashline").textContent = copy.aboutSlashline;
-  $("#aboutPoint1").textContent = copy.aboutPoints[0];
-  $("#aboutPoint2").textContent = copy.aboutPoints[1];
-  $("#aboutPoint3").textContent = copy.aboutPoints[2];
-  $("#aboutPoint4").textContent = copy.aboutPoints[3];
-  $("#bookCallB").textContent = copy.contactCta;
-  $("#footerConnectLabel").textContent = copy.footerConnectLabel;
-  $("#footerGithub").textContent = copy.footerGithub;
-  $("#footerThirdLabel").textContent = copy.footerThirdLabel;
-  $("#footerThirdValue").textContent = copy.footerThirdValue;
-  $("#footerCopy").textContent = copy.footerCopy;
-  $("#footerLegal").textContent = copy.footerLegal;
-  $("#footerLinkedin").textContent = copy.footerLinkedin;
-  document.querySelectorAll(".foot-label")[0].textContent = lang === "es" ? "Correo" : "E-mail";
+  $("#bookCallA").textContent = copy.bookCall;
+  $("#bookCallB").textContent = copy.contactCall;
+  $("#contactLinkA").textContent = copy.openLinkedin;
+  $("#focusKicker").textContent = copy.focusKicker;
+  $("#focusTitle").textContent = copy.focusTitle;
+  $("#projectsKicker").textContent = copy.projectsKicker;
+  $("#projectsTitle").textContent = copy.projectsTitle;
+  $("#stackKicker").textContent = copy.stackKicker;
+  $("#stackTitle").textContent = copy.stackTitle;
+  $("#stackCol1Title").textContent = copy.stackCol1Title;
+  $("#stackCol1Body").textContent = copy.stackCol1Body;
+  $("#stackCol2Title").textContent = copy.stackCol2Title;
+  $("#stackCol2Body").textContent = copy.stackCol2Body;
+  $("#stackCol3Title").textContent = copy.stackCol3Title;
+  $("#stackCol3Body").textContent = copy.stackCol3Body;
+  $("#contactKicker").textContent = copy.contactKicker;
+  $("#contactTitle").textContent = copy.contactTitle;
+  $("#contactBody").textContent = copy.contactBody;
+  $("#footerEmailLabel").textContent = copy.footerEmailLabel;
+  $("#footerGithubLabel").textContent = copy.footerGithubLabel;
+  $("#footerLinkedinLabel").textContent = copy.footerLinkedinLabel;
 
   $("#bookCallA").href = CONFIG.calendly;
   $("#bookCallB").href = CONFIG.calendly;
-  $("#bookCallA").target = "_blank";
-  $("#bookCallB").target = "_blank";
-  $("#bookCallA").rel = "noreferrer";
-  $("#bookCallB").rel = "noreferrer";
   $("#contactLinkA").href = CONFIG.linkedin;
-  $("#footerGithub").href = CONFIG.github;
-  $("#footerLinkedin").href = CONFIG.linkedin;
+  $("#linkedinTop").href = CONFIG.linkedin;
+  $("#footerEmail").href = `mailto:${CONFIG.email}`;
   $("#footerEmail").textContent = CONFIG.email;
+  $("#footerGithub").href = CONFIG.github;
+  $("#footerGithub").textContent = "xanadu8812";
+  $("#footerLinkedin").href = CONFIG.linkedin;
+  $("#footerLinkedin").textContent = "Henry Gomez";
 
+  renderFocusCards(lang);
   renderProjects(lang);
-  renderCapabilities(lang);
+
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.lang === lang);
   });
 }
 
 function bindButtons() {
-  [$("#copyEmailA"), $("#copyEmailB"), $("#copyEmailC")].filter(Boolean).forEach((button) => {
+  [$("#copyEmailA"), $("#copyEmailB")].filter(Boolean).forEach((button) => {
     button.addEventListener("click", () => copyEmail(button));
   });
+
   document.querySelectorAll("[data-lang]").forEach((button) => {
     button.addEventListener("click", () => {
       const lang = button.dataset.lang || "es";
@@ -276,22 +302,5 @@ function bindButtons() {
   });
 }
 
-function bindNavState() {
-  const links = [...document.querySelectorAll(".s-nav a")];
-  const sections = links
-    .map((link) => document.querySelector(link.getAttribute("href") || ""))
-    .filter(Boolean);
-
-  const observer = new IntersectionObserver((entries) => {
-    const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-    if (!visible) return;
-    const id = `#${visible.target.id}`;
-    links.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === id));
-  }, { rootMargin: "-30% 0px -55% 0px", threshold: [0.15, 0.3, 0.5, 0.75] });
-
-  sections.forEach((section) => observer.observe(section));
-}
-
 bindButtons();
-bindNavState();
 applyContent(getLanguage());

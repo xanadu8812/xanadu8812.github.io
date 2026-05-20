@@ -3,152 +3,176 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark light" />
     <title>Henry Gomez · Portfolio</title>
-    <meta name="description" content="Portfolio bilingue de Henry Gomez, ingeniero de desarrollo full stack enfocado en telecomunicaciones e infraestructura." />
+    <meta
+      name="description"
+      content="Portfolio bilingüe de Henry Gomez, ingeniero full stack enfocado en telecomunicaciones, infraestructura y productos digitales."
+    />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg" aria-hidden="true"></div>
-    <aside class="sidebar">
-      <div class="sidebar-inner">
-        <div class="s-avatar"><img src="assets/avatar-01.svg" alt="" /></div>
-        <div class="s-name" id="sidebarName">Henry Gomez</div>
-        <div class="s-role" id="sidebarRole">Ingeniero de desarrollo full stack</div>
-        <nav class="s-nav" aria-label="Sidebar navigation">
-          <a class="is-active" href="#top" id="navHome">Inicio</a>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Henry Gomez home">
+          <span class="brand-mark">HG</span>
+          <span class="brand-copy">
+            <strong>Henry Gomez</strong>
+            <span id="brandRole">Ingeniero full stack</span>
+          </span>
+        </a>
+
+        <nav class="topnav" aria-label="Primary">
+          <a href="#home" id="navHome">Inicio</a>
+          <a href="#focus" id="navFocus">Enfoque</a>
           <a href="#projects" id="navProjects">Proyecto</a>
-          <a href="#about" id="navAbout">Perfil</a>
-          <a href="#services" id="navServices">Stack</a>
+          <a href="#contact" id="navContact">Contacto</a>
         </nav>
-        <div class="lang-toggle" aria-label="Language switcher">
-          <button class="lang-chip is-active" type="button" data-lang="es">ES</button>
-          <button class="lang-chip" type="button" data-lang="en">EN</button>
+
+        <div class="topbar-actions">
+          <div class="lang-toggle" aria-label="Language switcher">
+            <button class="lang-chip is-active" type="button" data-lang="es">ES</button>
+            <button class="lang-chip" type="button" data-lang="en">EN</button>
+          </div>
+          <a class="mini-link" id="linkedinTop" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
-      </div>
-    </aside>
+      </header>
 
-    <main id="top" class="page">
-      <section class="hero">
-        <div class="hero-grid">
-          <div class="hero-left">
-            <div class="hero-top">
-              <div class="idblock">
-                <img class="avatar" src="assets/avatar-01.svg" alt="" />
-                <div class="idcopy">
-                  <div class="idname" id="heroName">Henry Gomez</div>
-                  <div class="idrole" id="heroRole">Full stack engineer</div>
-                </div>
-              </div>
-              <div class="hero-media" aria-label="Hero media">
-                <img class="hmedia hmedia-a" src="assets/hero-01.svg" alt="" />
-                <img class="hmedia hmedia-b" src="assets/hero-02.svg" alt="" />
-                <img class="hmedia hmedia-c" src="assets/hero-03.svg" alt="" />
-              </div>
-            </div>
-
-            <div class="availability" aria-label="Availability">
-              <span class="avail-dot" aria-hidden="true"></span>
-              <span id="availabilityText">Disponible para proyectos ( Colombia / Remoto )</span>
-            </div>
-
+      <main id="home">
+        <section class="hero">
+          <div class="hero-main">
+            <p class="eyebrow" id="availabilityText">Disponible para proyectos en Colombia y remoto</p>
             <h1 class="hero-title">
-              <span id="heroLine1">FULL STACK ENGINEER</span>
-              <span id="heroLine2">FOR DIGITAL PRODUCTS</span>
-              <span id="heroLine3">TELECOM SYSTEMS</span>
-              <span id="heroLine4">& INFRASTRUCTURE</span>
+              <span id="heroLine1">Ingeniería full stack</span>
+              <span id="heroLine2">para productos digitales,</span>
+              <span id="heroLine3">telecomunicaciones</span>
+              <span id="heroLine4">e infraestructura operativa.</span>
             </h1>
-
             <p class="hero-body" id="heroBody">
-              Combino 16 anos de experiencia en desarrollo full stack, plataformas CMS, telecomunicaciones e infraestructura para construir soluciones web estables, operables y alineadas con objetivos reales de negocio.
+              Combino 16 años de experiencia en desarrollo, plataformas CMS, VoIP, virtualización y operación técnica para construir soluciones estables, escalables y útiles para negocio.
             </p>
 
-            <div class="cta-rows" aria-label="Hero CTAs">
-              <div class="cta-row">
-                <button class="btn btn-outline" id="copyEmailA" type="button">Copiar correo</button>
-                <a class="btn btn-fill" id="bookCallA" href="#projects" rel="noreferrer">Ver proyecto destacado</a>
-              </div>
-              <div class="cta-row">
-                <button class="btn btn-outline" id="copyEmailB" type="button">Copiar correo</button>
-                <a class="btn btn-outline" id="contactLinkA" href="#" rel="noreferrer">Abrir LinkedIn</a>
-              </div>
+            <div class="hero-actions">
+              <a class="btn btn-primary" id="bookCallA" href="#" target="_blank" rel="noreferrer">Agendar 30 minutos</a>
+              <button class="btn btn-secondary" id="copyEmailA" type="button">Copiar correo</button>
             </div>
           </div>
-          <div class="hero-right">
-            <img class="astronaut" src="assets/hero-astronaut.svg" alt="" />
-            <div class="hero-schematic"></div>
-          </div>
-        </div>
-      </section>
 
-      <section id="projects" class="projects">
-        <div class="content-col">
-          <h2 class="section-title">
-            <span id="projectsLine1">FEATURED PROJECT,</span>
-            <span id="projectsLine2">CURRENT DIGITAL WORK.</span>
-          </h2>
-          <div id="projectGrid" class="project-stack" aria-label="Featured projects"></div>
-        </div>
-      </section>
+          <aside class="hero-side">
+            <article class="hero-card profile-card">
+              <div class="profile-top">
+                <img class="profile-avatar" src="assets/avatar-01.svg" alt="" />
+                <div>
+                  <div class="profile-name">Henry Gomez</div>
+                  <div class="profile-role" id="heroRole">Ingeniero full stack</div>
+                </div>
+              </div>
+              <dl class="meta-list">
+                <div>
+                  <dt id="metaLocationLabel">Ubicación</dt>
+                  <dd id="metaLocationValue">Colombia</dd>
+                </div>
+                <div>
+                  <dt id="metaExperienceLabel">Experiencia</dt>
+                  <dd id="metaExperienceValue">16 años</dd>
+                </div>
+                <div>
+                  <dt id="metaSpecialtyLabel">Especialidad</dt>
+                  <dd id="metaSpecialtyValue">Full stack, telco, infraestructura</dd>
+                </div>
+              </dl>
+            </article>
 
-      <section class="transition">
-        <div class="content-col">
-          <img class="transition-media" src="assets/transition-01.svg" alt="" />
-        </div>
-      </section>
+            <article class="hero-card signal-card">
+              <p class="signal-label" id="signalLabel">Áreas activas</p>
+              <div class="signal-grid">
+                <span>React</span>
+                <span>Next.js</span>
+                <span>Node.js</span>
+                <span>TypeScript</span>
+                <span>WordPress</span>
+                <span>Asterisk</span>
+                <span>Proxmox</span>
+                <span>VoIP</span>
+              </div>
+            </article>
+          </aside>
+        </section>
 
-      <section class="testimonials">
-        <div class="content-col">
-          <h2 class="section-title">
-            <span id="capabilitiesLine1">CORE CAPABILITIES,</span>
-            <span id="capabilitiesLine2">REAL TECHNICAL FOCUS</span>
-          </h2>
-          <div id="testimonialGrid" class="testimonial-grid" aria-label="Capabilities"></div>
-        </div>
-      </section>
+        <section id="focus" class="section">
+          <div class="section-heading">
+            <p class="section-kicker" id="focusKicker">Enfoque actual</p>
+            <h2 class="section-title" id="focusTitle">Desarrollo, operación y continuidad técnica en un mismo perfil.</h2>
+          </div>
 
-      <section id="about" class="finalcta">
-        <div class="content-col">
-          <h2 class="final-title" id="aboutTitle">READY TO BUILD?</h2>
-          <div class="slashline" id="aboutSlashline">// full stack // cms // telecom // infrastructure //</div>
-          <div class="questions" aria-label="Questions">
-            <div id="aboutPoint1">✦ Desarrollo web full stack con enfoque practico y orientado a resultados.</div>
-            <div id="aboutPoint2">✦ Experiencia con WordPress y otros CMS para entornos administrables.</div>
-            <div id="aboutPoint3">✦ Operacion de infraestructura, virtualizacion, VoIP y servicios tecnicos.</div>
-            <div id="aboutPoint4">✦ Perfil util para productos que necesitan construir y operar al mismo tiempo.</div>
-          </div>
-          <div class="final-actions">
-            <button class="btn btn-outline" id="copyEmailC" type="button">Copiar correo</button>
-            <a class="btn btn-fill" id="bookCallB" href="#contact" rel="noreferrer">Contactar</a>
-          </div>
-        </div>
-      </section>
+          <div class="focus-grid" id="focusGrid" aria-label="Core capabilities"></div>
+        </section>
 
-      <footer id="services" class="footer">
-        <div class="content-col footer-inner">
-          <div class="foot-col">
-            <div class="foot-head" id="footerConnectLabel">Conectar</div>
-            <a class="foot-link" id="footerGithub" href="#" rel="noreferrer">Hablar conmigo en GitHub</a>
+        <section id="projects" class="section">
+          <div class="section-heading">
+            <p class="section-kicker" id="projectsKicker">Proyecto destacado</p>
+            <h2 class="section-title" id="projectsTitle">Trabajo reciente con foco en producto, búsqueda y estabilidad.</h2>
           </div>
-          <div id="contact" class="foot-col">
-            <div class="foot-label">E-Mail</div>
-            <div class="foot-value" id="footerEmail">henry8812@gmail.com</div>
+
+          <div id="projectGrid" class="project-grid" aria-label="Featured projects"></div>
+        </section>
+
+        <section class="section stack-section">
+          <div class="section-heading narrow">
+            <p class="section-kicker" id="stackKicker">Stack principal</p>
+            <h2 class="section-title" id="stackTitle">Tecnologías con las que puedo construir, integrar y operar.</h2>
           </div>
-          <div class="foot-col">
-            <div class="foot-label" id="footerThirdLabel">Ubicacion</div>
-            <div class="foot-value" id="footerThirdValue">Colombia</div>
+
+          <div class="stack-columns">
+            <article class="stack-card">
+              <h3 id="stackCol1Title">Desarrollo web</h3>
+              <p id="stackCol1Body">JavaScript, TypeScript, React, Next.js, Node.js, APIs REST, interfaces administrativas y flujos de negocio.</p>
+            </article>
+            <article class="stack-card">
+              <h3 id="stackCol2Title">CMS y contenido</h3>
+              <p id="stackCol2Body">WordPress y otras plataformas administrables para sitios corporativos, comerciales y de operación diaria.</p>
+            </article>
+            <article class="stack-card">
+              <h3 id="stackCol3Title">Infraestructura y telco</h3>
+              <p id="stackCol3Body">Proxmox, Asterisk, VoIP, virtualización, Linux, redes, soporte técnico y servicios operativos.</p>
+            </article>
           </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+          <div class="contact-panel">
+            <div class="contact-copy">
+              <p class="section-kicker" id="contactKicker">Contacto</p>
+              <h2 class="section-title" id="contactTitle">Si necesitas construir o estabilizar un producto, podemos hablar.</h2>
+              <p class="contact-body" id="contactBody">
+                El portafolio seguirá creciendo con proyectos reales. Por ahora, este sitio presenta el enfoque, stack y la línea de trabajo con la que estoy operando.
+              </p>
+            </div>
+
+            <div class="contact-actions">
+              <a class="btn btn-primary" id="bookCallB" href="#" target="_blank" rel="noreferrer">Agendar llamada</a>
+              <button class="btn btn-secondary" id="copyEmailB" type="button">Copiar correo</button>
+              <a class="btn btn-ghost" id="contactLinkA" href="#" target="_blank" rel="noreferrer">Abrir LinkedIn</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-block">
+          <div class="footer-label" id="footerEmailLabel">Correo</div>
+          <a class="footer-value" id="footerEmail" href="mailto:henry8812@gmail.com">henry8812@gmail.com</a>
         </div>
-        <div class="content-col foot-legal">
-          <div class="copy" id="footerCopy">©2026 Henry Gomez</div>
-          <div class="legal" id="footerLegal">
-            Portafolio personal en evolucion continua. El contenido se actualiza de forma progresiva para reflejar proyectos reales, stack tecnico y capacidad operativa en desarrollo, telecomunicaciones e infraestructura.
-          </div>
-          <a class="framer" id="footerLinkedin" href="#" rel="noreferrer">Ver perfil de LinkedIn</a>
+        <div class="footer-block">
+          <div class="footer-label" id="footerGithubLabel">GitHub</div>
+          <a class="footer-value" id="footerGithub" href="#" target="_blank" rel="noreferrer">xanadu8812</a>
+        </div>
+        <div class="footer-block">
+          <div class="footer-label" id="footerLinkedinLabel">LinkedIn</div>
+          <a class="footer-value" id="footerLinkedin" href="#" target="_blank" rel="noreferrer">Henry Gomez</a>
         </div>
       </footer>
-    </main>
+    </div>
 
     <script src="app.js"></script>
   </body>

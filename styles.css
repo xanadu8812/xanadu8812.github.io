@@ -43,7 +43,7 @@ textarea {
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding: 32px 28px;
+  padding: 18px 14px;
 }
 
 .replica-orb {
@@ -81,7 +81,7 @@ textarea {
 .gallery-frame {
   position: relative;
   z-index: 1;
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -99,9 +99,9 @@ textarea {
 
 .desktop-device {
   flex: 1 1 auto;
-  max-width: 1040px;
+  max-width: 1180px;
   border-radius: 4px;
-  padding: 12px;
+  padding: 10px;
 }
 
 .mobile-device {

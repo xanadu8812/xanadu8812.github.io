@@ -1,3 +1,66 @@
+const PROJECTS = [
+  {
+    slug: "wekall-web",
+    title: "WeKall",
+    image: "assets/project-shots/wekall-home.png",
+    type: "Conversational AI",
+    url: "https://www.wekall.co/",
+    summary: "Plataforma de IA conversacional para voz y chat en la nube.",
+    details:
+      "Sitio corporativo orientado a producto, posicionamiento comercial y comunicación clara de soluciones para voz, chat e IA aplicada."
+  },
+  {
+    slug: "wekall-admin",
+    title: "WeKall Admin",
+    image: "assets/project-shots/wekall-admin.png",
+    type: "Admin Portal",
+    url: "https://admin.wekall.co",
+    summary: "Portal administrativo para telefonía, reportes y control operativo.",
+    details:
+      "Experiencia de acceso y administración para el servicio de telefonía, con foco en gestión operativa, reportes y funciones internas del producto."
+  },
+  {
+    slug: "microimpulso-web",
+    title: "Microimpulso",
+    image: "assets/project-shots/microimpulso-home.png",
+    type: "Fintech Website",
+    url: "https://microimpulso.co",
+    summary: "Landing fintech para microcréditos con simulación y solicitud rápida.",
+    details:
+      "Sitio público para adquisición y comunicación de producto financiero, con énfasis en claridad de oferta, confianza y conversión."
+  },
+  {
+    slug: "microimpulso-app",
+    title: "Microimpulso App",
+    image: "assets/project-shots/microimpulso-app.png",
+    type: "Client Access",
+    url: "https://app.microimpulso.co",
+    summary: "Portal de acceso para clientes y flujos privados de Microimpulso.",
+    details:
+      "Interfaz de autenticación y acceso a flujos internos de usuario para la operación digital del producto financiero."
+  },
+  {
+    slug: "devil-tv",
+    title: "Media Evaluation Platform Static",
+    image: "assets/project-shots/devil-tv.png",
+    type: "Static Web App",
+    url: "https://lerna-admin.github.io/media-evaluation-platform-static",
+    summary: "Plataforma web para descubrimiento y evaluación de contenido.",
+    details:
+      "Aplicación estática con búsqueda avanzada, vistas de detalle y trabajo iterativo en UX, navegación y estabilidad del flujo."
+  },
+  {
+    slug: "campus-ccc",
+    title: "Campus CCC",
+    image: "",
+    type: "Institutional Access",
+    url: "https://campus.ccc.org.co/",
+    summary: "Acceso institucional a campus y plataforma formativa.",
+    details:
+      "Proyecto de acceso y experiencia de campus institucional. Por ahora queda representado como ficha de proyecto mientras se obtiene una captura pública mejor."
+  }
+];
+
 const ROUTES = {
   home: {
     label: "Home",
@@ -264,24 +327,7 @@ const ROUTES = {
       <section class="ui">
         ${renderMeta()}
         <div class="content">
-          <div class="single-project">
-            <div class="single-thumb">
-              <img src="assets/project-fintech.svg" alt="" />
-            </div>
-            <div class="single-copy">
-              <h1>Designing for a startup, creating a practical product language.</h1>
-              <p>
-                A focused case study around structure, interface rhythm, and product clarity. The
-                desktop and mobile compositions stay consistent while the information hierarchy adapts
-                to each frame.
-              </p>
-              <div class="single-tags">
-                <span>Ui Ux</span>
-                <span>Case Study</span>
-                <span>Mobile</span>
-              </div>
-            </div>
-          </div>
+          ${renderProjectDetail(false)}
         </div>
         ${renderFooter("Next Js")}
         ${renderNav("projects")}
@@ -291,22 +337,7 @@ const ROUTES = {
       <section class="ui">
         ${renderMeta(true)}
         <div class="content">
-          <div class="single-project">
-            <div class="single-thumb">
-              <img src="assets/project-fintech.svg" alt="" />
-            </div>
-            <div class="single-copy">
-              <h1>Designing for a startup, creating a practical product language.</h1>
-              <p>
-                Desktop and mobile remain aligned while the information hierarchy compresses
-                into a simpler flow for smaller screens.
-              </p>
-              <div class="single-tags">
-                <span>Ui Ux</span>
-                <span>Mobile</span>
-              </div>
-            </div>
-          </div>
+          ${renderProjectDetail(true)}
         </div>
         ${renderFooter("Next Js", true)}
         ${renderNav("projects", true)}
@@ -387,9 +418,12 @@ function renderNav(active, isMobile = false) {
 }
 
 function renderProjectCard(image, label, href) {
+  const media = image
+    ? `<div class="project-thumb"><img src="${image}" alt="" /></div>`
+    : `<div class="project-thumb project-thumb-fallback"><span>${label}</span></div>`;
   return `
     <a class="project-card" href="${href}">
-      <div class="project-thumb"><img src="assets/${image}" alt="" /></div>
+      ${media}
       <span class="project-name">${label}</span>
     </a>
   `;
@@ -400,11 +434,38 @@ function renderProjectsCarousel(kind) {
     <div class="projects-carousel" data-carousel="${kind}">
       <button class="carousel-arrow carousel-arrow-prev" type="button" aria-label="Previous project">‹</button>
       <div class="project-track" data-track>
-        ${renderProjectCard("project-ph.svg", "Startup Dashboard", "#/project")}
-        ${renderProjectCard("project-fintech.svg", "Remote Max", "#/project")}
-        ${renderProjectCard("project-navo.svg", "Product Mockup", "#/project")}
+        ${PROJECTS.map((project) => renderProjectCard(project.image, project.title, `#/project/${project.slug}`)).join("")}
       </div>
       <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Next project">›</button>
+    </div>
+  `;
+}
+
+function getSelectedProject() {
+  const raw = window.location.hash.replace(/^#\/?/, "").trim();
+  const parts = raw.split("/");
+  const slug = parts[1];
+  return PROJECTS.find((project) => project.slug === slug) || PROJECTS[0];
+}
+
+function renderProjectDetail(isMobile) {
+  const project = getSelectedProject();
+  const media = project.image
+    ? `<div class="single-thumb"><img src="${project.image}" alt="" /></div>`
+    : `<div class="single-thumb single-thumb-fallback"><span>${project.title}</span></div>`;
+  return `
+    <div class="single-project">
+      ${media}
+      <div class="single-copy">
+        <h1>${project.title}</h1>
+        <p>${project.details}</p>
+        <div class="single-tags">
+          <span>${project.type}</span>
+          <span>Live Project</span>
+          <span>${isMobile ? "Web" : "Portfolio"}</span>
+        </div>
+        <a class="single-link" href="${project.url}" target="_blank" rel="noreferrer">Open Site</a>
+      </div>
     </div>
   `;
 }
@@ -426,7 +487,8 @@ function renderSkillMeter(label, level) {
 function getRouteKey() {
   const raw = window.location.hash.replace(/^#\/?/, "").trim();
   if (!raw) return "home";
-  if (ROUTES[raw]) return raw;
+  const base = raw.split("/")[0];
+  if (ROUTES[base]) return base;
   return "notfound";
 }
 

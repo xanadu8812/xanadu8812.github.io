@@ -96,6 +96,111 @@ const ROUTES = {
       </section>
     `
   },
+  skills: {
+    label: "Skills",
+    renderDesktop: () => `
+      <section class="ui skills-ui">
+        ${renderMeta()}
+        <div class="content">
+          <div class="skills-view">
+            <div class="skills-header">
+              <h1 class="skills-title">Skills</h1>
+              <p class="skills-copy">
+                Full stack development, CMS implementation, telecom systems and infrastructure support
+                delivered with a practical product mindset.
+              </p>
+            </div>
+            <div class="skills-groups">
+              <article class="skills-card">
+                <p class="skills-card-index">01</p>
+                <h3>Frontend</h3>
+                <div class="skills-tags">
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>JavaScript</span>
+                  <span>TypeScript</span>
+                  <span>HTML / CSS</span>
+                </div>
+              </article>
+              <article class="skills-card">
+                <p class="skills-card-index">02</p>
+                <h3>Backend & CMS</h3>
+                <div class="skills-tags">
+                  <span>Node.js</span>
+                  <span>PHP</span>
+                  <span>REST APIs</span>
+                  <span>WordPress</span>
+                  <span>Integrations</span>
+                </div>
+              </article>
+              <article class="skills-card">
+                <p class="skills-card-index">03</p>
+                <h3>Infra & Telco</h3>
+                <div class="skills-tags">
+                  <span>Proxmox</span>
+                  <span>Asterisk</span>
+                  <span>VoIP</span>
+                  <span>Linux</span>
+                  <span>Deployment</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        ${renderFooter("Next Js")}
+        ${renderNav("skills")}
+      </section>
+    `,
+    renderMobile: () => `
+      <section class="ui skills-ui">
+        ${renderMeta(true)}
+        <div class="content">
+          <div class="skills-view">
+            <div class="skills-header">
+              <h1 class="skills-title">Skills</h1>
+              <p class="skills-copy">
+                Full stack, CMS, telecom and infrastructure capabilities grouped in one view.
+              </p>
+            </div>
+            <div class="skills-groups">
+              <article class="skills-card">
+                <p class="skills-card-index">01</p>
+                <h3>Frontend</h3>
+                <div class="skills-tags">
+                  <span>React</span>
+                  <span>Next.js</span>
+                  <span>JavaScript</span>
+                  <span>TypeScript</span>
+                </div>
+              </article>
+              <article class="skills-card">
+                <p class="skills-card-index">02</p>
+                <h3>Backend & CMS</h3>
+                <div class="skills-tags">
+                  <span>Node.js</span>
+                  <span>PHP</span>
+                  <span>WordPress</span>
+                  <span>REST APIs</span>
+                </div>
+              </article>
+              <article class="skills-card">
+                <p class="skills-card-index">03</p>
+                <h3>Infra & Telco</h3>
+                <div class="skills-tags">
+                  <span>Proxmox</span>
+                  <span>Asterisk</span>
+                  <span>VoIP</span>
+                  <span>Linux</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        ${renderFooter("Next Js", true)}
+        ${renderNav("skills", true)}
+      </section>
+    `
+  },
   contact: {
     label: "Contact",
     renderDesktop: () => `
@@ -266,6 +371,7 @@ function renderNav(active, isMobile = false) {
     ["home", "Home"],
     ["projects", "Projects"],
     ["about", "About"],
+    ["skills", "Skills"],
     ["contact", "Contact"]
   ];
   return `

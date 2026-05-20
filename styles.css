@@ -85,133 +85,76 @@ textarea {
   margin: 0 auto;
 }
 
-.profile-panels {
-  position: relative;
-  z-index: 1;
-  max-width: 1440px;
-  margin: 28px auto 0;
-  display: grid;
-  gap: 18px;
+.skills-view {
+  width: min(100%, 860px);
 }
 
-.section-shell {
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  background: rgba(19, 17, 27, 0.72);
-  box-shadow: var(--shadow);
-  padding: 24px 28px;
-  backdrop-filter: blur(10px);
+.skills-ui .content {
+  align-items: flex-start;
 }
 
-.section-kicker {
-  margin: 0 0 12px;
-  color: var(--muted);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+.skills-header {
+  margin-bottom: 24px;
+  text-align: center;
 }
 
-.section-title-real {
+.skills-title {
   margin: 0;
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1.06;
+  font-size: 50px;
 }
 
-.section-copy {
-  max-width: 70ch;
-  margin: 14px 0 0;
+.skills-copy {
+  max-width: 64ch;
+  margin: 14px auto 0;
   font-family: "Inter", sans-serif;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.65;
   color: rgba(243, 241, 251, 0.74);
 }
 
-.skills-ribbon {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills-ribbon span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 0 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.capability-grid {
+.skills-groups {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
 }
 
-.capability-card {
-  min-height: 220px;
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent),
-    rgba(255, 255, 255, 0.02);
-}
-
-.capability-index {
-  margin: 0 0 20px;
-  color: var(--accent);
-  font-size: 12px;
-  letter-spacing: 0.2em;
-}
-
-.capability-card h3,
-.stack-panel h3 {
-  margin: 0 0 12px;
-  font-size: 22px;
-  line-height: 1.2;
-}
-
-.capability-card p {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  color: rgba(243, 241, 251, 0.72);
-}
-
-.stack-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.stack-panel {
-  padding: 22px;
+.skills-card {
+  min-height: 232px;
+  padding: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.03);
 }
 
-.stack-panel ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 10px;
-}
-
-.stack-panel li {
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-  color: rgba(243, 241, 251, 0.74);
-}
-
-.stack-panel li::before {
-  content: "✦";
-  margin-right: 8px;
+.skills-card-index {
+  margin: 0 0 16px;
   color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+
+.skills-card h3 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
 }
 
 .device-layout {
@@ -400,7 +343,7 @@ textarea {
 
 .screen-mobile .bottom-nav {
   gap: 8px;
-  padding: 8px 10px;
+  padding: 7px 8px;
 }
 
 .bottom-nav a {
@@ -411,7 +354,7 @@ textarea {
 }
 
 .screen-mobile .bottom-nav a {
-  font-size: 7px;
+  font-size: 6px;
 }
 
 .bottom-nav a.active {
@@ -592,6 +535,49 @@ textarea {
 
 .screen-mobile .project-name {
   font-size: 8px;
+}
+
+.screen-mobile .skills-title {
+  font-size: 21px;
+}
+
+.screen-mobile .skills-copy {
+  max-width: 24ch;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.screen-mobile .skills-view {
+  width: 100%;
+  padding-top: 18px;
+}
+
+.screen-mobile .skills-ui .content {
+  inset: 112px 20px 82px;
+}
+
+.screen-mobile .skills-header {
+  margin-bottom: 14px;
+}
+
+.screen-mobile .skills-groups {
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.screen-mobile .skills-card {
+  min-height: auto;
+  padding: 12px;
+}
+
+.screen-mobile .skills-card h3 {
+  font-size: 14px;
+}
+
+.screen-mobile .skills-tags span {
+  min-height: 26px;
+  padding: 0 8px;
+  font-size: 7px;
 }
 
 .single-project {
@@ -893,29 +879,13 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .profile-panels {
-    margin-top: 18px;
-  }
-
-  .section-shell {
-    padding: 18px 16px;
-  }
-
-  .section-copy,
-  .capability-card p,
-  .stack-panel li {
-    font-size: 14px;
-  }
-
-  .capability-grid,
-  .stack-grid {
+  .skills-groups {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 980px) {
-  .capability-grid,
-  .stack-grid {
+  .skills-groups {
     grid-template-columns: 1fr;
   }
 }

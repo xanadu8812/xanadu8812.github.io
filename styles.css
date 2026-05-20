@@ -319,7 +319,7 @@ textarea {
 }
 
 .screen-mobile .content {
-  inset: 76px 12px 72px;
+  inset: 76px 12px 60px;
 }
 
 .side-icons {
@@ -368,7 +368,7 @@ textarea {
 
 .screen-mobile .footer-left,
 .screen-mobile .footer-right {
-  bottom: 10px;
+  bottom: 6px;
   font-size: 8px;
 }
 
@@ -390,6 +390,7 @@ textarea {
 .screen-mobile .bottom-nav {
   gap: 8px;
   padding: 6px 7px;
+  bottom: 6px;
 }
 
 .bottom-nav a {
@@ -750,7 +751,7 @@ textarea {
 }
 
 .screen-mobile .skills-ui .content {
-  inset: 98px 12px 72px;
+  inset: 98px 12px 60px;
 }
 
 .screen-mobile .skills-header {

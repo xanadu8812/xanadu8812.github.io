@@ -81,8 +81,8 @@ const PROJECTS = [
 
 const PROFILE = {
   name: "Henry Gomez",
-  role: "Senior Product & Platform Engineer",
-  specialty: "Full Stack Architecture · Scalable Systems · Digital Execution",
+  role: "Technical Lead · Product & Platform Engineering",
+  specialty: "Architecture · Scalable Delivery · Technical Leadership",
   location: "Colombia",
   email: "henry8812@gmail.com",
   calendly: "https://calendly.com/henry-lernagroup/30min",
@@ -160,14 +160,15 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              I build digital products and operational platforms that have to work in the real world,
-              not only in demos. Over 16 years, I&apos;ve moved across product engineering, full stack
-              development, CMS ecosystems and platform operations, helping turn business needs into
-              stable systems, usable interfaces and technical delivery that can actually scale.
+              I lead the design and delivery of digital products, operational platforms and technical
+              systems that need to hold up in production. Over 16 years, I&apos;ve worked across product
+              engineering, architecture, full stack execution, CMS ecosystems and platform operations,
+              turning business demands into stable systems, clear user experiences and technical roadmaps
+              that teams can actually operate and scale.
             </p>
           </div>
         </div>
-        ${renderFooter("16+ Years", "Product to Operations")}
+        ${renderFooter("16+ Years", "Architecture to Delivery")}
         ${renderNav("about")}
       </section>
     `,
@@ -178,12 +179,12 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              I design and deliver products, platforms and systems that need to perform in production,
-              connecting business goals with real technical execution.
+              I lead product, platform and systems delivery with a focus on architecture,
+              production readiness and technical execution that supports real business goals.
             </p>
           </div>
         </div>
-        ${renderFooter("16+ Years", "Execution", true)}
+        ${renderFooter("16+ Years", "Leadership", true)}
         ${renderNav("about", true)}
       </section>
     `

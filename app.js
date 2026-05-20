@@ -63,8 +63,8 @@ const PROJECTS = [
 
 const PROFILE = {
   name: "Henry Gomez",
-  role: "Senior Full Stack Engineer",
-  specialty: "Full Stack · Product Engineering · Scalable Platforms",
+  role: "Senior Product & Platform Engineer",
+  specialty: "Full Stack Architecture · Scalable Systems · Digital Execution",
   location: "Colombia",
   email: "henry8812@gmail.com",
   calendly: "https://calendly.com/henry-lernagroup/30min",
@@ -142,10 +142,10 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              I&apos;m a software developer with 16 years of experience building digital products,
-              operational platforms and technical environments that need to work beyond the interface.
-              My focus spans full stack development, CMS implementations, telecom solutions and
-              infrastructure workflows that support real business operations.
+              I&apos;m an engineer with 16 years of experience building digital products,
+              operational platforms and technical environments that need to perform beyond the interface.
+              My work connects product engineering, full stack delivery, CMS ecosystems and
+              platform operations to solve real business and technical demands.
             </p>
           </div>
         </div>
@@ -160,8 +160,8 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              Software developer focused on full stack delivery, CMS platforms, telecom and
-              infrastructure with a practical approach to real operational systems.
+              Senior engineer focused on digital products, full stack delivery, CMS ecosystems
+              and platform operations with a practical approach to systems that need to work in production.
             </p>
           </div>
         </div>
@@ -180,8 +180,8 @@ const ROUTES = {
             <div class="skills-header">
               <h1 class="skills-title">Skills</h1>
               <p class="skills-copy">
-                Core technologies and operating areas used across web products, CMS environments,
-                telecom systems and infrastructure-focused delivery.
+                Core technologies and operating areas used across web products, CMS ecosystems,
+                platform operations and production-grade delivery.
               </p>
             </div>
             <div class="skills-groups">
@@ -233,7 +233,7 @@ const ROUTES = {
             <div class="skills-header">
               <h1 class="skills-title">Skills</h1>
               <p class="skills-copy">
-                Full stack, CMS, DevOps and telecom capabilities grouped in one view.
+                Full stack, CMS, DevOps and platform capabilities grouped in one view.
               </p>
             </div>
             <div class="skills-groups">
@@ -292,8 +292,8 @@ const ROUTES = {
                 </div>
               </div>
               <p class="contact-copy">
-                If you want to talk about product development, CMS platforms, telecom systems,
-                infrastructure or an ongoing technical build, schedule a meeting directly.
+                If you want to talk about digital products, web platforms, CMS ecosystems
+                or complex technical delivery, schedule a meeting directly.
               </p>
               <div class="contact-actions">
                 <a class="contact-cta" href="${PROFILE.calendly}" target="_blank" rel="noreferrer">Book 30 Minutes</a>
@@ -329,7 +329,7 @@ const ROUTES = {
                 </div>
               </div>
               <p class="contact-copy">
-                Book a direct call to discuss development, infrastructure or product work.
+                Book a direct call to discuss product engineering, platform delivery or complex technical builds.
               </p>
               <div class="contact-actions">
                 <a class="contact-cta" href="${PROFILE.calendly}" target="_blank" rel="noreferrer">Book 30 Minutes</a>

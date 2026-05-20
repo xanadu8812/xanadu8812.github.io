@@ -63,7 +63,7 @@ const PROJECTS = [
 
 const PROFILE = {
   name: "Henry Gomez",
-  role: "Software Developer",
+  role: "Senior Full Stack Engineer",
   specialty: "Full Stack · Product Engineering · Scalable Platforms",
   location: "Colombia",
   email: "henry8812@gmail.com",

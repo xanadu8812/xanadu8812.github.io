@@ -114,34 +114,34 @@ const ROUTES = {
               <article class="skills-card">
                 <p class="skills-card-index">01</p>
                 <h3>Frontend</h3>
-                <div class="skills-tags">
-                  <span>React</span>
-                  <span>Next.js</span>
-                  <span>JavaScript</span>
-                  <span>TypeScript</span>
-                  <span>HTML / CSS</span>
+                <div class="skills-meter-list">
+                  ${renderSkillMeter("React", 90)}
+                  ${renderSkillMeter("Next.js", 86)}
+                  ${renderSkillMeter("JavaScript", 94)}
+                  ${renderSkillMeter("TypeScript", 80)}
+                  ${renderSkillMeter("HTML / CSS", 92)}
                 </div>
               </article>
               <article class="skills-card">
                 <p class="skills-card-index">02</p>
                 <h3>Backend & CMS</h3>
-                <div class="skills-tags">
-                  <span>Node.js</span>
-                  <span>PHP</span>
-                  <span>REST APIs</span>
-                  <span>WordPress</span>
-                  <span>Integrations</span>
+                <div class="skills-meter-list">
+                  ${renderSkillMeter("Node.js", 84)}
+                  ${renderSkillMeter("PHP", 82)}
+                  ${renderSkillMeter("REST APIs", 88)}
+                  ${renderSkillMeter("WordPress", 90)}
+                  ${renderSkillMeter("Integrations", 86)}
                 </div>
               </article>
               <article class="skills-card">
                 <p class="skills-card-index">03</p>
-                <h3>Infra & Telco</h3>
-                <div class="skills-tags">
-                  <span>Proxmox</span>
-                  <span>Asterisk</span>
-                  <span>VoIP</span>
-                  <span>Linux</span>
-                  <span>Deployment</span>
+                <h3>DevOps & Infra</h3>
+                <div class="skills-meter-list">
+                  ${renderSkillMeter("Proxmox", 86)}
+                  ${renderSkillMeter("Linux", 84)}
+                  ${renderSkillMeter("Asterisk", 80)}
+                  ${renderSkillMeter("VoIP", 82)}
+                  ${renderSkillMeter("Deployment", 78)}
                 </div>
               </article>
             </div>
@@ -166,31 +166,31 @@ const ROUTES = {
               <article class="skills-card">
                 <p class="skills-card-index">01</p>
                 <h3>Frontend</h3>
-                <div class="skills-tags">
-                  <span>React</span>
-                  <span>Next.js</span>
-                  <span>JavaScript</span>
-                  <span>TypeScript</span>
+                <div class="skills-meter-list">
+                  ${renderSkillMeter("React", 90)}
+                  ${renderSkillMeter("Next.js", 86)}
+                  ${renderSkillMeter("JavaScript", 94)}
+                  ${renderSkillMeter("TypeScript", 80)}
                 </div>
               </article>
               <article class="skills-card">
                 <p class="skills-card-index">02</p>
                 <h3>Backend & CMS</h3>
-                <div class="skills-tags">
-                  <span>Node.js</span>
-                  <span>PHP</span>
-                  <span>WordPress</span>
-                  <span>REST APIs</span>
+                <div class="skills-meter-list">
+                  ${renderSkillMeter("Node.js", 84)}
+                  ${renderSkillMeter("PHP", 82)}
+                  ${renderSkillMeter("WordPress", 90)}
+                  ${renderSkillMeter("REST APIs", 88)}
                 </div>
               </article>
               <article class="skills-card">
                 <p class="skills-card-index">03</p>
-                <h3>Infra & Telco</h3>
-                <div class="skills-tags">
-                  <span>Proxmox</span>
-                  <span>Asterisk</span>
-                  <span>VoIP</span>
-                  <span>Linux</span>
+                <h3>DevOps & Infra</h3>
+                <div class="skills-meter-list">
+                  ${renderSkillMeter("Proxmox", 86)}
+                  ${renderSkillMeter("Asterisk", 80)}
+                  ${renderSkillMeter("VoIP", 82)}
+                  ${renderSkillMeter("Linux", 84)}
                 </div>
               </article>
             </div>
@@ -405,6 +405,20 @@ function renderProjectsCarousel(kind) {
         ${renderProjectCard("project-navo.svg", "Product Mockup", "#/project")}
       </div>
       <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Next project">›</button>
+    </div>
+  `;
+}
+
+function renderSkillMeter(label, level) {
+  return `
+    <div class="skill-meter">
+      <div class="skill-meter-head">
+        <span>${label}</span>
+        <strong>${level}%</strong>
+      </div>
+      <div class="skill-meter-track">
+        <span class="skill-meter-fill" style="width:${level}%"></span>
+      </div>
     </div>
   `;
 }

@@ -138,23 +138,39 @@ textarea {
   line-height: 1.2;
 }
 
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.skills-meter-list {
+  display: grid;
+  gap: 12px;
 }
 
-.skills-tags span {
-  display: inline-flex;
+.skill-meter-head {
+  display: flex;
   align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text);
+}
+
+.skill-meter-head strong {
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.skill-meter-track {
+  height: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.skill-meter-fill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(240, 244, 187, 0.82), rgba(255, 255, 255, 0.92));
 }
 
 .device-layout {
@@ -574,10 +590,13 @@ textarea {
   font-size: 14px;
 }
 
-.screen-mobile .skills-tags span {
-  min-height: 26px;
-  padding: 0 8px;
+.screen-mobile .skill-meter-head,
+.screen-mobile .skill-meter-head strong {
   font-size: 7px;
+}
+
+.screen-mobile .skill-meter-track {
+  height: 6px;
 }
 
 .single-project {

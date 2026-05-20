@@ -6,11 +6,11 @@ const PROJECTS = [
     brandImage: "assets/project-brands/wekall.svg",
     theme: "wekall",
     imagePosition: "50% 0%",
-    type: "Conversational AI",
+    type: "AI Cloud Communications",
     url: "https://www.wekall.co/",
-    summary: "Plataforma de IA conversacional para voz y chat en la nube.",
+    summary: "Plataforma de IA conversacional para voz, chat e integraciones empresariales en la nube.",
     details:
-      "Sitio corporativo orientado a producto, posicionamiento comercial y comunicación clara de soluciones para voz, chat e IA aplicada."
+      "Plataforma de comunicación empresarial con IA aplicada a voz, chat, transcripción, automatización e integraciones CRM. La propuesta actual del producto se apoya fuertemente en servicios cloud y operación escalable sobre AWS."
   },
   {
     slug: "wekall-admin",
@@ -19,11 +19,11 @@ const PROJECTS = [
     brandImage: "assets/project-brands/wekall.svg",
     theme: "wekall-admin",
     imagePosition: "50% 14%",
-    type: "Admin Portal",
+    type: "Operations Portal",
     url: "https://admin.wekall.co",
-    summary: "Portal administrativo para telefonía, reportes y control operativo.",
+    summary: "Portal operativo para telefonía, reportes, grabaciones y administración del servicio.",
     details:
-      "Experiencia de acceso y administración para el servicio de telefonía, con foco en gestión operativa, reportes y funciones internas del producto."
+      "Portal administrativo orientado a la operación del producto: acceso, control de funcionalidades, reportes de llamadas, grabaciones y gestión diaria del servicio para clientes y equipos internos."
   },
   {
     slug: "microimpulso-web",
@@ -32,11 +32,11 @@ const PROJECTS = [
     brandImage: "assets/project-brands/microimpulso.png",
     theme: "microimpulso",
     imagePosition: "50% 0%",
-    type: "Fintech Website",
+    type: "Fintech Acquisition",
     url: "https://microimpulso.co",
-    summary: "Landing fintech para microcréditos con simulación y solicitud rápida.",
+    summary: "Sitio fintech enfocado en captación, simulación de crédito y solicitud rápida.",
     details:
-      "Sitio público para adquisición y comunicación de producto financiero, con énfasis en claridad de oferta, confianza y conversión."
+      "Experiencia pública orientada a adquisición para un producto de microcrédito: propuesta clara, confianza, simulación simple y embudo digital para acelerar la conversión."
   },
   {
     slug: "microimpulso-app",
@@ -45,11 +45,11 @@ const PROJECTS = [
     brandImage: "assets/project-brands/microimpulso.png",
     theme: "microimpulso-app",
     imagePosition: "50% 18%",
-    type: "Client Access",
+    type: "Client Portal",
     url: "https://app.microimpulso.co",
-    summary: "Portal de acceso para clientes y flujos privados de Microimpulso.",
+    summary: "Portal privado de acceso para clientes y continuidad del flujo digital financiero.",
     details:
-      "Interfaz de autenticación y acceso a flujos internos de usuario para la operación digital del producto financiero."
+      "Aplicación de acceso para clientes que extiende la operación digital del producto financiero con autenticación, continuidad de proceso y flujos privados asociados al servicio."
   },
   {
     slug: "devil-tv",
@@ -58,11 +58,11 @@ const PROJECTS = [
     brandImage: "assets/project-brands/devil-tv.png",
     theme: "devil-tv",
     imagePosition: "50% 0%",
-    type: "Static Web App",
+    type: "Media Discovery App",
     url: "https://lerna-admin.github.io/media-evaluation-platform-static",
-    summary: "Plataforma web para descubrimiento y evaluación de contenido.",
+    summary: "Aplicación web para descubrimiento, evaluación y exploración de contenido audiovisual.",
     details:
-      "Aplicación estática con búsqueda avanzada, vistas de detalle y trabajo iterativo en UX, navegación y estabilidad del flujo."
+      "Aplicación web centrada en UX de catálogo, búsqueda avanzada, filtros, vistas de detalle, releases iterativos y estabilidad de navegación dentro de una experiencia frontend estática."
   },
   {
     slug: "campus-ccc",
@@ -71,11 +71,11 @@ const PROJECTS = [
     brandImage: "assets/project-brands/campus.gif",
     theme: "campus",
     imagePosition: "42% 0%",
-    type: "Institutional Access",
+    type: "E-Learning Platform",
     url: "https://campus.ccc.org.co/",
-    summary: "Acceso institucional a campus y plataforma formativa.",
+    summary: "Plataforma corporativa de acceso, formación y soporte para usuarios de campus virtual.",
     details:
-      "Proyecto de acceso y experiencia de campus institucional, con foco en autenticación, soporte al usuario y operación de plataforma formativa."
+      "Plataforma corporativa de e-learning con autenticación, autoregistro, recuperación, soporte y operación continua para formación virtual. La solución se apoya en una base cloud fuerte y, según tu experiencia directa, en infraestructura sobre AWS."
   }
 ];
 
@@ -162,9 +162,9 @@ const ROUTES = {
             <p class="about-body">
               I lead the design and delivery of digital products, operational platforms and technical
               systems that need to hold up in production. Over 16 years, I&apos;ve worked across product
-              engineering, architecture, full stack execution, CMS ecosystems and platform operations,
-              turning business demands into stable systems, clear user experiences and technical roadmaps
-              that teams can actually operate and scale.
+              engineering, architecture, full stack execution, CMS ecosystems, cloud environments and
+              platform operations, turning business demands into stable systems, clear user experiences
+              and technical roadmaps that teams can actually operate and scale.
             </p>
           </div>
         </div>
@@ -179,7 +179,7 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              I lead product, platform and systems delivery with a focus on architecture,
+              I lead product, platform and cloud delivery with a focus on architecture,
               production readiness and technical execution that supports real business goals.
             </p>
           </div>
@@ -200,7 +200,7 @@ const ROUTES = {
               <h1 class="skills-title">Skills</h1>
               <p class="skills-copy">
                 Core technologies and operating areas used across web products, CMS ecosystems,
-                platform operations and production-grade delivery.
+                cloud environments, platform operations and production-grade delivery.
               </p>
             </div>
             <div class="skills-groups">
@@ -228,19 +228,20 @@ const ROUTES = {
               </article>
               <article class="skills-card">
                 <p class="skills-card-index">03</p>
-                <h3>DevOps & Infra</h3>
+                <h3>Cloud, DevOps & Infra</h3>
                 <div class="skills-meter-list">
+                  ${renderSkillMeter("AWS", 88)}
+                  ${renderSkillMeter("Google Cloud", 84)}
                   ${renderSkillMeter("Proxmox", 86)}
                   ${renderSkillMeter("Linux", 84)}
                   ${renderSkillMeter("Asterisk", 80)}
                   ${renderSkillMeter("VoIP", 82)}
-                  ${renderSkillMeter("Deployment", 78)}
                 </div>
               </article>
             </div>
           </div>
         </div>
-        ${renderFooter("Execution Stack", "Frontend · Backend · DevOps")}
+        ${renderFooter("Execution Stack", "Frontend · Backend · Cloud")}
         ${renderNav("skills")}
       </section>
     `,
@@ -252,7 +253,7 @@ const ROUTES = {
             <div class="skills-header">
               <h1 class="skills-title">Skills</h1>
               <p class="skills-copy">
-                Full stack, CMS, DevOps and platform capabilities grouped in one view.
+                Full stack, CMS, cloud and platform capabilities grouped in one view.
               </p>
             </div>
             <div class="skills-groups">
@@ -278,8 +279,10 @@ const ROUTES = {
               </article>
               <article class="skills-card">
                 <p class="skills-card-index">03</p>
-                <h3>DevOps & Infra</h3>
+                <h3>Cloud, DevOps & Infra</h3>
                 <div class="skills-meter-list">
+                  ${renderSkillMeter("AWS", 88)}
+                  ${renderSkillMeter("Google Cloud", 84)}
                   ${renderSkillMeter("Proxmox", 86)}
                   ${renderSkillMeter("Asterisk", 80)}
                   ${renderSkillMeter("VoIP", 82)}
@@ -311,8 +314,8 @@ const ROUTES = {
                 </div>
               </div>
               <p class="contact-copy">
-                If you want to talk about digital products, web platforms, CMS ecosystems
-                or complex technical delivery, schedule a meeting directly.
+                If you want to talk about digital products, AWS or Google Cloud advisory,
+                CMS ecosystems or complex technical delivery, schedule a meeting directly.
               </p>
               <div class="contact-actions">
                 <a class="contact-cta" href="${PROFILE.calendly}" target="_blank" rel="noreferrer">Book 30 Minutes</a>
@@ -348,7 +351,7 @@ const ROUTES = {
                 </div>
               </div>
               <p class="contact-copy">
-                Book a direct call to discuss product engineering, platform delivery or complex technical builds.
+                Book a direct call to discuss cloud advisory, product engineering or platform delivery.
               </p>
               <div class="contact-actions">
                 <a class="contact-cta" href="${PROFILE.calendly}" target="_blank" rel="noreferrer">Book 30 Minutes</a>

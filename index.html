@@ -1,162 +1,23 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Henry Gomez · Portfolio</title>
     <meta
       name="description"
-      content="Portfolio bilingüe de Henry Gomez, software developer full stack enfocado en telecomunicaciones, infraestructura y productos digitales."
+      content="Exact visual replica stage of the selected Figma portfolio layout."
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-bg" aria-hidden="true"></div>
-
-    <main class="page-shell" id="home">
-      <section class="hero">
-        <header class="hero-header">
-          <a class="brand" href="#home" aria-label="Henry Gomez home">
-            <span class="brand-strong">Henry</span><span class="brand-light">Gomez</span>
-          </a>
-
-          <nav class="hero-nav" aria-label="Primary">
-            <a href="#home" id="navHome">Inicio</a>
-            <a href="#projects" id="navProjects">Proyectos</a>
-            <a href="#focus" id="navFocus">Perfil</a>
-            <a href="#contact" id="navContact">Contacto</a>
-          </nav>
-
-          <div class="hero-actions-top">
-            <div class="lang-toggle" aria-label="Language switcher">
-              <button class="lang-chip is-active" type="button" data-lang="es">ES</button>
-              <button class="lang-chip" type="button" data-lang="en">EN</button>
-            </div>
-            <a class="social-pill" id="githubTop" href="#" target="_blank" rel="noreferrer">GH</a>
-            <a class="social-pill" id="linkedinTop" href="#" target="_blank" rel="noreferrer">in</a>
-          </div>
-        </header>
-
-        <div class="hero-content">
-          <div class="hero-copy">
-            <p class="hero-intro" id="heroIntro">Hola, soy Henry,</p>
-
-            <h1 class="hero-title">
-              <span id="heroLine1">SOFTWARE</span>
-              <span id="heroLine2">DEVELOPER</span>
-              <span id="heroLine3">FULL STACK,</span>
-              <span id="heroLine4">TELCO & INFRA</span>
-            </h1>
-
-            <p class="hero-body" id="heroBody">
-              Combino 16 años de experiencia en desarrollo full stack, plataformas CMS, telecomunicaciones e infraestructura para construir soluciones digitales estables, operables y alineadas con objetivos reales.
-            </p>
-
-            <div class="hero-cta">
-              <a class="hero-link" id="bookCallA" href="#" target="_blank" rel="noreferrer">Agendar 30 minutos</a>
-              <button class="hero-copy-button" id="copyEmailA" type="button">Copiar correo</button>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="hero-portrait-frame">
-              <img class="hero-portrait" src="assets/landing-page-reference.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="meta-strip" id="focus">
-        <article class="meta-card">
-          <span class="meta-label" id="metaExperienceLabel">Experiencia</span>
-          <strong id="metaExperienceValue">16 años</strong>
-          <p id="highlightExperienceBody">Años resolviendo producto, operación y continuidad técnica.</p>
-        </article>
-        <article class="meta-card">
-          <span class="meta-label" id="metaSpecialtyLabel">Especialidad</span>
-          <strong id="metaSpecialtyValue">Full stack, telco, infraestructura</strong>
-          <p id="highlightFocusBody">Desarrollo web, CMS, VoIP, virtualización e infraestructura.</p>
-        </article>
-        <article class="meta-card">
-          <span class="meta-label" id="metaLocationLabel">Ubicación</span>
-          <strong id="metaLocationValue">Colombia</strong>
-          <p id="highlightAvailabilityBody">Perfil técnico útil para construir y operar al mismo tiempo.</p>
-        </article>
-      </section>
-
-      <section class="section section-featured" id="projects">
-        <div class="section-copy">
-          <p class="section-kicker" id="projectsKicker">Proyecto destacado</p>
-          <h2 class="section-title" id="projectsTitle">Trabajo reciente con foco en producto, búsqueda y estabilidad.</h2>
-        </div>
-        <div id="projectGrid" class="project-grid" aria-label="Featured projects"></div>
-      </section>
-
-      <section class="section">
-        <div class="section-copy">
-          <p class="section-kicker" id="focusKicker">Enfoque actual</p>
-          <h2 class="section-title" id="focusTitle">Desarrollo, operación y continuidad técnica en un mismo perfil.</h2>
-        </div>
-        <div id="focusGrid" class="focus-grid" aria-label="Core capabilities"></div>
-      </section>
-
-      <section class="section section-stack">
-        <div class="section-copy narrow">
-          <p class="section-kicker" id="stackKicker">Stack principal</p>
-          <h2 class="section-title" id="stackTitle">Tecnologías con las que puedo construir, integrar y operar.</h2>
-        </div>
-
-        <div class="stack-grid">
-          <article class="stack-card">
-            <h3 id="stackCol1Title">Desarrollo web</h3>
-            <p id="stackCol1Body">JavaScript, TypeScript, React, Next.js, Node.js, APIs REST, interfaces administrativas y flujos de negocio.</p>
-          </article>
-          <article class="stack-card">
-            <h3 id="stackCol2Title">CMS y contenido</h3>
-            <p id="stackCol2Body">WordPress y otras plataformas administrables para sitios corporativos, comerciales y de operación diaria.</p>
-          </article>
-          <article class="stack-card">
-            <h3 id="stackCol3Title">Infraestructura y telco</h3>
-            <p id="stackCol3Body">Proxmox, Asterisk, VoIP, virtualización, Linux, redes, soporte técnico y servicios operativos.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section section-contact" id="contact">
-        <div class="contact-card">
-          <div class="contact-copy">
-            <p class="section-kicker" id="contactKicker">Contacto</p>
-            <h2 class="section-title" id="contactTitle">Si necesitas construir o estabilizar un producto, podemos hablar.</h2>
-            <p class="contact-body" id="contactBody">
-              El portafolio seguirá creciendo con proyectos reales. Por ahora, este sitio presenta el enfoque, stack y la línea de trabajo con la que estoy operando.
-            </p>
-          </div>
-
-          <div class="contact-actions">
-            <a class="hero-link" id="bookCallB" href="#" target="_blank" rel="noreferrer">Agendar llamada</a>
-            <button class="hero-copy-button" id="copyEmailB" type="button">Copiar correo</button>
-            <a class="contact-link" id="contactLinkA" href="#" target="_blank" rel="noreferrer">Abrir LinkedIn</a>
-          </div>
-        </div>
-      </section>
-
-      <footer class="site-footer">
-        <div class="footer-block">
-          <div class="footer-label" id="footerEmailLabel">Correo</div>
-          <a class="footer-value" id="footerEmail" href="mailto:henry8812@gmail.com">henry8812@gmail.com</a>
-        </div>
-        <div class="footer-block">
-          <div class="footer-label" id="footerGithubLabel">GitHub</div>
-          <a class="footer-value" id="footerGithub" href="#" target="_blank" rel="noreferrer">xanadu8812</a>
-        </div>
-        <div class="footer-block">
-          <div class="footer-label" id="footerLinkedinLabel">LinkedIn</div>
-          <a class="footer-value" id="footerLinkedin" href="#" target="_blank" rel="noreferrer">Henry Gomez</a>
-        </div>
-      </footer>
+    <main class="replica-shell">
+      <img
+        class="replica-frame"
+        src="assets/landing-page-reference.png"
+        alt="Portfolio landing page reference"
+      />
     </main>
-
-    <script src="app.js"></script>
   </body>
 </html>

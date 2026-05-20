@@ -103,7 +103,7 @@ const ROUTES = {
             <p class="home-subtitle">${PROFILE.specialty}</p>
           </div>
         </div>
-        ${renderFooter("16 Years")}
+        ${renderFooter("Colombia / Remote", "Available for Projects")}
         ${renderNav("home")}
       </section>
     `,
@@ -117,7 +117,7 @@ const ROUTES = {
             <p class="home-subtitle">${PROFILE.specialty}</p>
           </div>
         </div>
-        ${renderFooter("16 Years", true)}
+        ${renderFooter("Colombia / Remote", "Available", true)}
         ${renderNav("home", true)}
       </section>
     `
@@ -133,7 +133,7 @@ const ROUTES = {
             ${renderProjectsCarousel("desktop")}
           </div>
         </div>
-        ${renderFooter("Live Work")}
+        ${renderFooter("Selected Work", "Live Products")}
         ${renderNav("projects")}
       </section>
     `,
@@ -146,7 +146,7 @@ const ROUTES = {
             ${renderProjectsCarousel("mobile")}
           </div>
         </div>
-        ${renderFooter("Live Work", true)}
+        ${renderFooter("Selected Work", "Live")}
         ${renderNav("projects", true)}
       </section>
     `
@@ -160,14 +160,14 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              I&apos;m an engineer with 16 years of experience building digital products,
-              operational platforms and technical environments that need to perform beyond the interface.
-              My work connects product engineering, full stack delivery, CMS ecosystems and
-              platform operations to solve real business and technical demands.
+              I build digital products and operational platforms that have to work in the real world,
+              not only in demos. Over 16 years, I&apos;ve moved across product engineering, full stack
+              development, CMS ecosystems and platform operations, helping turn business needs into
+              stable systems, usable interfaces and technical delivery that can actually scale.
             </p>
           </div>
         </div>
-        ${renderFooter("Profile")}
+        ${renderFooter("16+ Years", "Product to Operations")}
         ${renderNav("about")}
       </section>
     `,
@@ -178,12 +178,12 @@ const ROUTES = {
           <div class="about-copy">
             <h1 class="about-title">About</h1>
             <p class="about-body">
-              Senior engineer focused on digital products, full stack delivery, CMS ecosystems
-              and platform operations with a practical approach to systems that need to work in production.
+              I design and deliver products, platforms and systems that need to perform in production,
+              connecting business goals with real technical execution.
             </p>
           </div>
         </div>
-        ${renderFooter("Profile", true)}
+        ${renderFooter("16+ Years", "Execution", true)}
         ${renderNav("about", true)}
       </section>
     `
@@ -239,7 +239,7 @@ const ROUTES = {
             </div>
           </div>
         </div>
-        ${renderFooter("Capabilities")}
+        ${renderFooter("Execution Stack", "Frontend · Backend · DevOps")}
         ${renderNav("skills")}
       </section>
     `,
@@ -288,7 +288,7 @@ const ROUTES = {
             </div>
           </div>
         </div>
-        ${renderFooter("Capabilities", true)}
+        ${renderFooter("Execution Stack", "Stack", true)}
         ${renderNav("skills", true)}
       </section>
     `
@@ -328,7 +328,7 @@ const ROUTES = {
             </div>
           </div>
         </div>
-        ${renderFooter("Calendly")}
+        ${renderFooter("Book 30 Minutes", PROFILE.email)}
         ${renderNav("contact")}
       </section>
     `,
@@ -364,7 +364,7 @@ const ROUTES = {
             </div>
           </div>
         </div>
-        ${renderFooter("Calendly", true)}
+        ${renderFooter("Book 30 Min", "Direct Contact", true)}
         ${renderNav("contact", true)}
       </section>
     `
@@ -377,7 +377,7 @@ const ROUTES = {
         <div class="content">
           ${renderProjectDetail(false)}
         </div>
-        ${renderFooter("Case Study")}
+        ${renderFooter("Project Breakdown", "Live Review")}
         ${renderNav("projects")}
       </section>
     `,
@@ -387,7 +387,7 @@ const ROUTES = {
         <div class="content">
           ${renderProjectDetail(true)}
         </div>
-        ${renderFooter("Case Study", true)}
+        ${renderFooter("Project Breakdown", "Live", true)}
         ${renderNav("projects", true)}
       </section>
     `
@@ -403,7 +403,7 @@ const ROUTES = {
             <div class="not-found-note">Page not found</div>
           </div>
         </div>
-        ${renderFooter("404")}
+        ${renderFooter("Not Found", "Back to Work")}
         ${renderNav("contact")}
       </section>
     `,
@@ -416,7 +416,7 @@ const ROUTES = {
             <div class="not-found-note">Page not found</div>
           </div>
         </div>
-        ${renderFooter("404", true)}
+        ${renderFooter("Not Found", "Retry", true)}
         ${renderNav("contact", true)}
       </section>
     `
@@ -438,10 +438,10 @@ function renderMeta(isMobile = false) {
   `;
 }
 
-function renderFooter(left, isMobile = false) {
+function renderFooter(left, right, isMobile = false) {
   return `
     <div class="footer-left">${left}</div>
-    <div class="footer-right">${isMobile ? PROFILE.portfolioLabel : `${PROFILE.portfolioLabel}.github.io`}</div>
+    <div class="footer-right">${right}</div>
   `;
 }
 

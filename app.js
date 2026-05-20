@@ -13,23 +13,23 @@ const I18N = {
     navProjects: "Proyecto",
     navAbout: "Perfil",
     navServices: "Stack",
-    heroRole: "Full stack engineer",
+    heroRole: "Ingeniero full stack",
     availability: "Disponible para proyectos ( Colombia / Remoto )",
     heroLines: [
-      "FULL STACK ENGINEER",
-      "FOR DIGITAL PRODUCTS",
-      "TELECOM SYSTEMS",
-      "& INFRASTRUCTURE"
+      "INGENIERO FULL STACK",
+      "PARA PRODUCTOS DIGITALES",
+      "SISTEMAS DE TELECOM",
+      "E INFRAESTRUCTURA"
     ],
     heroBody: "Combino 16 anos de experiencia en desarrollo full stack, plataformas CMS, telecomunicaciones e infraestructura para construir soluciones web estables, operables y alineadas con objetivos reales de negocio.",
     copyEmail: "Copiar correo",
     copied: "Correo copiado",
     ctaPrimary: "Ver proyecto destacado",
     ctaSecondary: "Abrir LinkedIn",
-    projectsTitle: ["FEATURED PROJECT,", "CURRENT DIGITAL WORK."],
-    capabilitiesTitle: ["CORE CAPABILITIES,", "REAL TECHNICAL FOCUS"],
-    aboutTitle: "READY TO BUILD?",
-    aboutSlashline: "// full stack // cms // telecom // infrastructure //",
+    projectsTitle: ["PROYECTO DESTACADO,", "TRABAJO DIGITAL ACTUAL."],
+    capabilitiesTitle: ["CAPACIDADES CLAVE,", "ENFOQUE TECNICO REAL"],
+    aboutTitle: "LISTO PARA CONSTRUIR?",
+    aboutSlashline: "// full stack // cms // telecom // infraestructura //",
     aboutPoints: [
       "✦ Desarrollo web full stack con enfoque practico y orientado a resultados.",
       "✦ Experiencia con WordPress y otros CMS para entornos administrables.",
@@ -47,7 +47,7 @@ const I18N = {
     projectLink: "Ver proyecto",
     projects: [
       {
-        tags: ["JavaScript", "UX/UI", "Search UX", "GitHub Pages", "Release Flow"],
+        tags: ["JavaScript", "UX/UI", "UX de busqueda", "GitHub Pages", "Flujo de releases"],
         title: "Media Evaluation Platform Static",
         support: "Plataforma web para descubrimiento y evaluacion de contenido con mejoras en busqueda, UX, estabilidad y control de versiones.",
         image: "assets/project-fintech.svg",
@@ -56,17 +56,17 @@ const I18N = {
     ],
     capabilities: [
       {
-        name: "Full Stack Web",
+        name: "Desarrollo web full stack",
         role: "React, Next.js, JavaScript, TypeScript, Node.js y APIs.",
         quote: "Desarrollo interfaces y logica de negocio con foco en estabilidad, mantenibilidad y entrega real."
       },
       {
-        name: "CMS & Plataformas",
+        name: "CMS y plataformas",
         role: "WordPress y otros CMS para entornos administrables.",
         quote: "Trabajo con sitios corporativos, comerciales y flujos de contenido donde la operacion diaria importa tanto como el codigo."
       },
       {
-        name: "Infraestructura & Telco",
+        name: "Infraestructura y telecom",
         role: "Proxmox, VoIP con Asterisk, virtualizacion y soporte tecnico.",
         quote: "Puedo moverme entre producto digital e infraestructura para resolver necesidades operativas completas."
       }
@@ -242,6 +242,7 @@ function applyContent(lang) {
   $("#footerCopy").textContent = copy.footerCopy;
   $("#footerLegal").textContent = copy.footerLegal;
   $("#footerLinkedin").textContent = copy.footerLinkedin;
+  document.querySelectorAll(".foot-label")[0].textContent = lang === "es" ? "Correo" : "E-mail";
 
   $("#bookCallA").href = "#projects";
   $("#bookCallB").href = "#contact";

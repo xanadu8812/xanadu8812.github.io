@@ -247,7 +247,7 @@ textarea {
 .ui {
   position: absolute;
   inset: 0;
-  padding: 18px 24px 22px;
+  padding: 12px 6px 10px;
 }
 
 .screen-mobile .ui {
